@@ -10,16 +10,17 @@
 	Nun folgt der "head"-Bereich.
 	"head" ist nicht etwa der Seitenkopf, 
 	der head-Bereich enthaelt vielmehr Informationen, die dem 
-	Browser anzeigen, wie er die Webseite aufbereiten soll 
--->
-<head>
-<!-- 
+	Browser anzeigen, wie er die Webseite aufbereiten soll. 
+	
 	Die Tags im Head-Bereich werden spaeter in diesem
 	Kurs erklaert. Insbesondere werden Sie dann verstehen,
-	was "charset" bedeutet 
+	was "charset" bedeutet
 -->
+<head>
+
 <meta charset="UTF-8">
 <title>Meine erste PHP-Webseite</title>
+
 </head>
 
 
