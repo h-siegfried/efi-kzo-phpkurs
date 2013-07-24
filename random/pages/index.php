@@ -8,13 +8,13 @@ $zufallszahl;
 
 <head>
 <meta charset="utf-8">
-<title>String-&Uuml;bungen</title>
+<title>Erste &Uuml;bungen mit Zahlen</title>
 <link rel="stylesheet" href="../style/styles_string2.css" />
 </head>
 
 
 <body>
-<h1>&Uuml;bung: String extrahieren</h1>
+<h1>&Uuml;bung: Zufallszahl erzeugen</h1>
 
 <p>Im n&auml;chsten Absatz erscheint die Ausgabe meiner Zufallszahl.</p>
 
