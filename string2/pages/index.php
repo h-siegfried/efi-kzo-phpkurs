@@ -11,6 +11,7 @@ $nachname;
 <head>
 <meta charset="utf-8">
 <title>String-&Uuml;bungen</title>
+<!-- <link rel="stylesheet" href="../style/styles_string2.css" /> -->
 </head>
 
 
