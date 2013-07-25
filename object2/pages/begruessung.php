@@ -5,36 +5,38 @@
  * "Geh in den übergeordneten Ordner!"
  */
 require_once('../classes/Begruesser.php');
+$begruessung = "";
 
-if( isset($_POST['hoeflichkeit']) ) {
-	// Uebernehmen Sie hier aus dem Array $_POST die Elemente, die Sie 
-	// fuer den Konstruktor des Begruessers brauchen, in neue Variablen.
-	$politesse = $_POST['hoeflichkeit'];
-	$alter = $_POST['alterBegruesser'];
-	$genusBegruesser = $_POST['genderBegruesser'];
+
+// Pruefen Sie, ob die Elemente von $_POST, 
+// die Sie fuer den Konstruktor des Begruessers brauchen,
+// gesetzt sind. 
+// Wenn ja, uebernehmen Sie diese Elemente in neue Variablen....
+
 	
 	
 	
-	// Erzeugen Sie hier ein neues Objekt vom Typ
+	
+	// ...und erzeugen Sie hier ein neues Objekt vom Typ
 	// Begruesser. Uebergeben Sie dem Konstruktor die vorher
 	// erzeugten Variablen. Weisen Sie das neue Objekt der 
 	// Variable $snoopy zu.
-	$snoopy = new Begruesser($politesse, $genusBegruesser, $alter);
+	$snoopy;
 	
 	
-	// Uebernehmen Sie hier aus dem Array $_POST die Elemente, die Sie
-	// fuer den Aufruf der Begruessungs-Methode brauchen.
-	$geschlechtsname = $_POST['geschlechtsname'];
-	$vorname = $_POST['vorname'];
-	$genderNutzer = $_POST['genderNutzer'];
+// Nun pruefen Sie, ob die Elemente von $_POST,
+// die Sie fuer den Aufruf der Methode getBegruessung() brauchen, 
+// gesetzt sind.
+// Wenn ja, uebernehmen Sie sie ebenfalls in neue Variablen.
+	
 	
 	
 	
 	// Rufen Sie diese Methode dann auf.
 	// Weisen Sie deren Rueckgabewert der Variable
 	// $begruessung zu.
-	$begruessung = $snoopy->getBegruessung($geschlechtsname, $vorname, $genderNutzer);
-}
+	
+
 
 ?>
 

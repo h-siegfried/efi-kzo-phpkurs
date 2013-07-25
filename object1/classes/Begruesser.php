@@ -1,9 +1,13 @@
 <?php
 /**
+ * This file contains the class Begruesser, intended for exercises
+ * in the informatics classes at kzo.ch
+ * @author Hanspeter Siegfried, KZO, 8620 Wetzikon, Switzerland
  * @package classes
  */
 /**
  * Class Begruesser
+ * @author Hanspeter Siegfried, kzo.ch
  * @package classes
  */
 class Begruesser
