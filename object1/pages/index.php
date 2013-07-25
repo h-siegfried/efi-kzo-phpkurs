@@ -1,42 +1,40 @@
 <?php
-/* Den sogenannten output buffer starten.
-* Dieser sammelt alle Ausgaben des FirePHP-Objekts und
-* fuegt sie am Schluss so in die HTML_Seite ein, 
-* dass sie fuer Firebug sichtbar sind.
-*/ 
-ob_start();
+/*
+ * Den Code der Klassendatei einbinden:
+ * (das Kürzel "../" bedeutet:
+ * "Geh in den übergeordneten Ordner!"
+ */
+require_once('../classes/Begruesser.php');
 
-// Die Klasse FirePHP einbinden
-require_once('../../FirePHPCore/FirePHP.class.php');
+// Erzeugen Sie hier ein neues Objekt vom Typ
+// Begruesser und weisen Sie es der 
+// Variable $snoopy zu.
 
-// Ein neues FirePHP-Objekt erzeugen:
-$firephp = new FirePHP();
+$snoopy;
 
 
+// Rufen Sie hier die Begruessungs-Methode auf.
+// Weisen Sie deren Rueckgabewert der Variable
+// $begruessung zu.
+$begruessung;
 
 ?>
+
 
 <!DOCTYPE html>
 <html>
-
 <head>
-<meta charset="utf-8">
-<title>Object-&Uuml;bungen</title>
-<link rel="stylesheet" href="../style/styles_object1.css" />
+<meta charset="UTF-8">
+<title>Erste &Uuml;bung mit Objekten</title>
+<link rel="stylesheet" href="../stylesheets/styles_object1.css" />
 </head>
-
-
 <body>
-<h1>&Uuml;bungen mit dem Datentyp Object</h1>
-
-<p>Im n&auml;chsten Absatz erscheint die Ausgabe meines PHP-Programms:</p>
-
+<h1>Erste &Uuml;bung mit einem Objekt</h1>
+<p>Die Begr&uuml;ssung:<p>
 <p>
 <?php 
-$firephp->log($firephp->getOptions());
+print($begruessung);
 ?>
 </p>
-
 </body>
-
 </html>
