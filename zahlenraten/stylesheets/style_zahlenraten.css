@@ -1,0 +1,6 @@
+@CHARSET "UTF-8";
+
+p, h1, h2, h3, input {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color: #333333;
+}
