@@ -2,9 +2,28 @@
 $antwort_teil1 = "Ihr Rateversuch ist ";
 $antwort_teil2 = "";
 
+
+
+// Hier wird geprueft, ob dies der erste Seitenaufruf ist,
+// oder ob der Benutzer ein neues Spiel beginnen moechte:
+if((!isset($_POST)) || isset($_POST['neuesSpiel'])) {
+	// In diesem Fall muessen wir eine neue Zufallszahl erzeugen!
+	// Programmieren Sie das und weisen Sie die Zufallszahl der Variable
+	// $meineZahl zu.
+	
+	
+	
+}
+else{  // Ein Spiel ist am Laufen, Geheimzahl reaktivieren:
+	$meineZahl = $_POST['geheimzahl'];
+}
+
+
+// Hier wird geprueft, ob der Benutzer ueberhaupt schon  
+// einen Rateversuch eingegeben und abgeschickt hat.
 if(isset($_POST['rateversuch'])) {
 	$versuch = $_POST['rateversuch'];
-}
+} 
 else {
 	$versuch = 0;
 	$antwort_teil2 = "noch nicht erfolgt.";
@@ -62,12 +81,15 @@ else {
 		</p>
 		<form action="#" method="post">
 			<p>
-				Ihr Rateversuch: <input type="number" name="rateversuch" />
+				Ihr Rateversuch: 
+				<input type="number" name="rateversuch" />
+				<input type="hidden" name="geheimzahl" value=<?php print($meineZahl);?>
 			</p>
 			<p>
-				Pr&uuml;fen? <input type="submit" value="Pr&uuml;fen!"
+				Pr&uuml;fen? <input type="submit" value="Pr&uuml;fen!" />
 			
 			</p>
+			
 		</form>
 
 	</div>
