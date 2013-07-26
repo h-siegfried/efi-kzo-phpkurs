@@ -75,7 +75,7 @@ else { // Es ist kein Rateversuch abgeschickt worden.
 			// Die beiden Strings der Variablen
 			// $antwort_teil1 und $antwort_teil2
 			// sollen aneinandergehaengt werden.
-			print($antwort_teil1 . $antwort_teil2);
+			
 
 			?>
 		</p>
@@ -87,8 +87,7 @@ else { // Es ist kein Rateversuch abgeschickt worden.
 			Sie liegt zwischen
 			<?php print($min);?>
 			und
-			<?php print($max);?>
-			.
+			<?php print($max);?>.
 		</p>
 		<form action="#" method="post">
 			<p>
