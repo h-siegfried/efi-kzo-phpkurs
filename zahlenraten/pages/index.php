@@ -1,7 +1,8 @@
 <?php 
 $antwort_teil1 = "Ihr Rateversuch ist ";
 $antwort_teil2 = "";
-
+$min = 1;
+$max = 16;
 
 
 // Hier wird geprueft, ob dies der erste Seitenaufruf ist,
@@ -10,32 +11,43 @@ if((!isset($_POST)) || isset($_POST['neuesSpiel'])) {
 	// In diesem Fall muessen wir eine neue Zufallszahl erzeugen!
 	// Programmieren Sie das und weisen Sie die Zufallszahl der Variable
 	// $meineZahl zu.
-	
-	
-	
+	$meineZahl = mt_rand($min, $max);
+
+
 }
 else{  // Ein Spiel ist am Laufen, Geheimzahl reaktivieren:
 	$meineZahl = $_POST['geheimzahl'];
 }
 
 
-// Hier wird geprueft, ob der Benutzer ueberhaupt schon  
+// Hier wird geprueft, ob der Benutzer ueberhaupt schon
 // einen Rateversuch eingegeben und abgeschickt hat.
 if(isset($_POST['rateversuch'])) {
 	$versuch = $_POST['rateversuch'];
-} 
+
+
+	// Programmieren Sie hier die Fallunterscheidung:
+	// Der Antwortversuch steht unter der Variable $versuch
+	// zur Verfuegung.
+	// Weisen Sie der Variable $antwort_teil2 den passenden
+	// String zu, je nachdem, ob die Antwort zu hoch,
+	// zu niedrig oder genau richtig war!
+	if($versuch < $meineZahl) {
+		$antwort_teil2 = "zu tief.";
+	}
+	elseif($versuch == $meineZahl) {
+		$antwort_teil2 = "genau richtig!";
+	}
+	else {
+		$antwort_teil2 = "zu hoch.";
+	}
+}
 else {
 	$versuch = 0;
 	$antwort_teil2 = "noch nicht erfolgt.";
 }
 
 
-// Programmieren Sie hier die Fallunterscheidung:
-// Der Antwortversuch steht unter der Variable $versuch
-// zur Verfuegung.
-// Weisen Sie der Variable $antwort_teil2 den passenden
-// String zu, je nachdem, ob die Antwort zu hoch,
-// zu niedrig oder genau richtig war!
 
 
 
@@ -49,6 +61,7 @@ else {
 <head>
 <meta charset="UTF-8">
 <title>Zahlenratespiel</title>
+<link rel="stylesheet" href="../stylesheets/style_zahlenraten.css" />
 </head>
 
 <body>
@@ -64,7 +77,7 @@ else {
 			// Die beiden Strings der Variablen
 			// $antwort_teil1 und $antwort_teil2
 			// sollen aneinandergehaengt werden.
-
+			print($antwort_teil1 . $antwort_teil2);
 
 			?>
 		</p>
@@ -82,14 +95,21 @@ else {
 		<form action="#" method="post">
 			<p>
 				Ihr Rateversuch: 
-				<input type="number" name="rateversuch" />
-				<input type="hidden" name="geheimzahl" value=<?php print($meineZahl);?>
+				<input type="number" name="rateversuch" /> 
+				<input
+					type="hidden" name="geheimzahl" value="<?php print($meineZahl);?>" />
+			
 			</p>
 			<p>
 				Pr&uuml;fen? <input type="submit" value="Pr&uuml;fen!" />
-			
+
 			</p>
-			
+		</form>
+		<form action="#" method="post">
+			<p>
+				Neue Spiel beginnen? <input type="submit" name="neuesSpiel" value="Ja, neues Spiel!" />
+			</p>
+
 		</form>
 
 	</div>
