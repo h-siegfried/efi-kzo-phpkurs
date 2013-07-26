@@ -36,16 +36,19 @@ if(isset($_POST['rateversuch'])) { // Ein Rate-Versuch ist abgeschickt worden
 	
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	
 }  // Ende des Falles, dass ein Rateversuch abgeschickt worden ist.
 else { // Es ist kein Rateversuch abgeschickt worden.
 	$versuch = 0;
 	$antwort_teil2 = "noch nicht erfolgt.";
 }
-
-
-
-
-
 
 ?>
 
