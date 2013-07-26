@@ -8,10 +8,11 @@ $max = 16;
 // Hier wird geprueft, ob dies der erste Seitenaufruf ist,
 // oder ob der Benutzer ein neues Spiel beginnen moechte:
 if((!isset($_POST)) || isset($_POST['neuesSpiel'])) {
+	
 	// In diesem Fall muessen wir eine neue Zufallszahl erzeugen!
 	// Programmieren Sie das und weisen Sie die Zufallszahl der Variable
 	// $meineZahl zu.
-	$meineZahl = mt_rand($min, $max);
+	
 
 
 }
@@ -22,9 +23,9 @@ else{  // Ein Spiel ist am Laufen, Geheimzahl reaktivieren:
 
 // Hier wird geprueft, ob der Benutzer ueberhaupt schon
 // einen Rateversuch eingegeben und abgeschickt hat.
-if(isset($_POST['rateversuch'])) {
+if(isset($_POST['rateversuch'])) { // Ein Rate-Versuch ist abgeschickt worden
+	// Den Rateversuch der Benutzerin uebernehmen:
 	$versuch = $_POST['rateversuch'];
-
 
 	// Programmieren Sie hier die Fallunterscheidung:
 	// Der Antwortversuch steht unter der Variable $versuch
@@ -32,17 +33,11 @@ if(isset($_POST['rateversuch'])) {
 	// Weisen Sie der Variable $antwort_teil2 den passenden
 	// String zu, je nachdem, ob die Antwort zu hoch,
 	// zu niedrig oder genau richtig war!
-	if($versuch < $meineZahl) {
-		$antwort_teil2 = "zu tief.";
-	}
-	elseif($versuch == $meineZahl) {
-		$antwort_teil2 = "genau richtig!";
-	}
-	else {
-		$antwort_teil2 = "zu hoch.";
-	}
-}
-else {
+	
+	
+	
+}  // Ende des Falles, dass ein Rateversuch abgeschickt worden ist.
+else { // Es ist kein Rateversuch abgeschickt worden.
 	$versuch = 0;
 	$antwort_teil2 = "noch nicht erfolgt.";
 }
