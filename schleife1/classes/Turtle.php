@@ -211,6 +211,7 @@ class Turtle
 
 	/**
 	 * Puts the turtle's pen onto the canvas.
+	 * @return void
 	 */
 	public function penDown()
 	{
@@ -219,6 +220,7 @@ class Turtle
 
 	/**
 	 * Takes the turtle's pen off the canvas.
+	 * @return void
 	 */
 	public function penUp()
 	{
