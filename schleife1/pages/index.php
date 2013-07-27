@@ -4,39 +4,32 @@ require_once('../classes/Turtle.php');
 require_once('../../FirePHPCore/FirePHP.class.php');
 $firephp = FirePHP::getInstance(true);
 
-
+// Im Arbeitsspeicher des Servers ein Bild erzeugen:
 $img = imagecreatetruecolor(400, 400);
+
+// Eine Farbe in der Farbpalette des Bildes definieren
 $hintergrund = imagecolorallocate($img, 248,248,248);
+
+// Mit der eben definierten Farbe das gesamte Bild auffüllen
 imagefill($img, 0, 0, $hintergrund);
-// imagesetthickness($img, 10);
+
+// Erzeugen Sie hier ein neues Objekt der Klasse Turtle
+// und weisen Sie es einer Variable zu.
+// Vergessen Sie nicht, die Methode penDown() aufzurufen,
+// damit die Turtle nicht nur "geht", sondern auch 
+// sichtbare Spuren hinterlässt.
 
 
-$edi = new Turtle($img, 400, 400, $firephp);
-$edi->penDown();
-$edi->setPenWidth(10);
-$edi->setPenColor(255, 0, 60);
 
-/*
-$edi->forward(100);
-$edi->turn(-90);
-$edi->forward(100);
-$edi->turn(-90);
-$edi->forward(100);
-$edi->turn(-90);
-$edi->forward(100);
-
-$edi->jumpTo(300, 0);
-
-*/
+// Nun können Sie die Turtle eine Figur zeichnen lassen
 
 
-for($i = 0; $i < 6; $i++) {
-	$edi->forward(100);
-	$edi->turn(360 / 6);
-	$edi->setPenColor($edi->getPenColor() + 40, 0, 0);
-}
 
 
+// Schliesslich schreiben wir das fertige Bild
+// aus dem Arbeitsspeicher auf die Festplatte.
+// Von dort wird es danach im HTML-Code eingebunden.
+// Sie sehen im Body den <img>-Tag, der dazu dient.
 imagepng($img, "../images/bild.png");
 
 ?>

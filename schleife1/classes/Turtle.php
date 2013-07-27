@@ -17,7 +17,7 @@
  * and draw them on a gd image.
  * @author Hanspeter Siegfried, KZO, CH-8620 Wetzikon
  * @package classes
- * @version 0.1
+ * @version 1.0.0
  *
  */
 class Turtle
@@ -84,6 +84,15 @@ class Turtle
 	 */
 	protected $firephp;
 
+	/**
+	 * Constructor method
+	 * @param resource $imageHandle An image resource identifier returned by
+	 * the function imagecreatetruecolor() or imagecreate()
+	 * @param integer $imageWidth The width of the turtle's playground
+	 * @param integer $imageHeight The height of the turtle's playground
+	 * @param FirePHP $firePHP an instance of the FirePHP class. This argument is optional.
+	 * It can be useful for debugging.
+	 */
 	function __construct(&$imageHandle, $imageWidth, $imageHeight, $firePHP = NULL)
 	{
 		$this->imageHandle = $imageHandle;
@@ -101,7 +110,9 @@ class Turtle
 	}
 	
 	/**
-	 * 
+	 * Returns the color identifier (an integer) of the turtle's pen color.
+	 * This color identifier can be used as argument for any draw function 
+	 * applied directly to the image resource.
 	 * @return integer the color identifier of the turtle's current pen color
 	 * (compatible to PHP's GD image functions)
 	 */
@@ -111,7 +122,37 @@ class Turtle
 	}
 	
 	/**
-	 * 
+	 * Returns the amount of red in the turtle's pen color.
+	 * @return integer: An integer between 0 and 255 meaning the amount of red in
+	 * the turtle's pen color
+	 */
+	public function getPenRed()
+	{
+		return imagecolorsforindex($this->imageHandle, $this->penColor)['red'];
+	}
+	
+	/**
+	 * Returns the amount of green in the turtle's pen color.
+	 * @return integer: An integer between 0 and 255 meaning the amount of green
+	 * in the turtle's pen color
+	 */
+	public function getPenGreen()
+	{
+		return imagecolorsforindex($this->imageHandle, $this->penColor)['green'];		
+	}
+	
+	/**
+	 * Returns the amount of blue in the turtle's pen color
+	 * @return integer: An integer between 0 and 255 meaning the amount of blue
+	 * in the turtle's pen color
+	 */
+	public function getPenBlue()
+	{
+		return imagecolorsforindex($this->imageHandle, $this->penColor)['blue'];
+	}
+	
+	/**
+	 * Returns the width of the turtle's pen as an integer (in pixels)
 	 * @return integer the current width of the turtle's pen (in pixels)
 	 */
 	public function getPenWidth()
@@ -120,7 +161,7 @@ class Turtle
 	}
 	
 	/**
-	 * 
+	 * Returns the information, whether the turtle's pen is currently down.
 	 * @return boolean Whether the turtle's pen is currently down or not.
 	 */
 	public function isPenDown()
@@ -129,7 +170,7 @@ class Turtle
 	}
 	
 	/**
-	 * 
+	 * Returns the turtle's current x ordinate.
 	 * @return integer The turtle's current x-position
 	 */
 	public function getX()
@@ -138,7 +179,7 @@ class Turtle
 	}
 	
 	/**
-	 * 
+	 * Returns the turtle's current y ordinate
 	 * @return integer The turtle's current y-position
 	 */
 	public function getY()
@@ -147,7 +188,7 @@ class Turtle
 	}
 	
 	/**
-	 * 
+	 * Sets the turtle's pen color.
 	 * @param integer $red The amount of red (decimal number between 0 and 250)
 	 * @param integer $green The amount of green (decimal number between 0 and 250)
 	 * @param integer $blue The amount of blue (decimal number between 0 and 250)
@@ -155,11 +196,11 @@ class Turtle
 	public function setPenColor($red, $green, $blue)
 	{
 		$this->penColor = imagecolorallocate($this->imageHandle, $red, $green, $blue);
-		$this->firephp->log($this);
+		//$this->firephp->log($this->imageHandle);
 	}
 
 	/**
-	 * 
+	 * Sets the width of the turtle's pen. 
 	 * @param integer $penWidth The new width of the turtle's pen. In Pixels.
 	 */
 	public function setPenWidth($penWidth)
@@ -185,24 +226,23 @@ class Turtle
 	}
 
 	/**
-	 * 
+	 * Lets the turtle go forward (in the direction of its current heading). The argument passed
+	 * is the desired distance in pixels.
 	 * @param integer $strecke moves the turtle for the distance passed as argument (in pixels)
 	 */
 	public function forward($strecke)
 	{
-// 		$back = imagecolorallocate($this->imageHandle, 255, 255, 255);
-// 		imagefill($this->imageHandle, 0, 0, $back);
 
 		$newX = $this->xPos + round($strecke * cos($this->angle));
 		$newY = $this->yPos + round($strecke * sin($this->angle));
-		if(isset($this->firephp)) {
-			$this->firephp->log(array(
-					"angle" => $this->angle,
-					"sinus" => (sin($this->angle)),
-					"delta-y" => round($strecke * sin($this->angle))), "Berechnung von Delta-y");
-			$this->firephp->log($newX, "newX");
-			$this->firephp->log($newY, "newY");
-		}
+// 		if(isset($this->firephp)) {
+// 			$this->firephp->log(array(
+// 					"angle" => $this->angle,
+// 					"sinus" => (sin($this->angle)),
+// 					"delta-y" => round($strecke * sin($this->angle))), "Berechnung von Delta-y");
+// 			$this->firephp->log($newX, "newX");
+// 			$this->firephp->log($newY, "newY");
+// 		}
 
 		if($this->isPenDown) {
 			imageline($this->imageHandle, $this->xPos, $this->yPos, $newX, $newY, $this->penColor);
@@ -217,7 +257,7 @@ class Turtle
 
 
 	/**
-	 * 
+	 * Sets the turtle's heading. The argument passed is an integer meaning degrees.
 	 * @param integer $newAngleDegrees  The new heading of the turtle. In degrees
 	 */
 	public function setAngle($newAngleDegrees) {
@@ -225,7 +265,8 @@ class Turtle
 	}
 
 	/**
-	 * 
+	 * Lets the turtle turn right by an angle (in degrees) passed as argument.
+	 * An integer below zero lets it turn left.
 	 * @param integer $angleDegrees The angle to turn. In degrees.
 	 */
 	public function turn($angleDegrees)
