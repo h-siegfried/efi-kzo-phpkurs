@@ -16,7 +16,6 @@
  * With a turtle object you can program turtle graphics in php
  * and draw them on a gd image.
  * @author Hanspeter Siegfried, KZO, CH-8620 Wetzikon
- * @package classes
  * @version 1.0.0
  *
  */
