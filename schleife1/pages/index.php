@@ -1,6 +1,6 @@
 <?php
 ob_start();
-require_once('../classes/Turtle.php');
+require_once('../../Turtle_class/Turtle.php');
 require_once('../../FirePHPCore/FirePHP.class.php');
 
 // Ein Objekt der Klasse FirePHP erzeugen

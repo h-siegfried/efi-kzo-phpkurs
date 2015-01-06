@@ -95,7 +95,7 @@ class Turtle
 	 */
 	function __construct(&$imageHandle, $imageWidth, $imageHeight, $firePHP = NULL)
 	{
-		if(!is_resource($imageHandle) {
+		if(!is_resource($imageHandle)) {
 			throw new InvalidArgumentException("Sie muessen dem Konstruktor 
 				der Klasse Turtle als 1. Parameter eine Image-Resource uebergeben, 
 				der Konstruktor hat stattdessen den Wert NULL erhalten.",E_USER_ERROR);
