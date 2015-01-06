@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project title="API Documentation" version="v2.8.1">
+  <partials/>
+  <file path="Turtle.php" generated-path="Turtle.html" hash="ca3b20799dcbd171f0e98d973238ccca" package="classes">
+    <docblock line="0">
+      <description>This file contains the Turtle class
+intended for turtle graphic programming
+in php.</description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="classes"/>
+      <tag name="package" line="0" description="classes"/>
+      <tag name="author" line="0" description="Hanspeter Siegfried, kzo.ch"/>
+      <tag name="version" line="0" description="0.1"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="" line="22" package="classes">
+      <extends/>
+      <name>Turtle</name>
+      <full_name>\Turtle</full_name>
+      <docblock line="22">
+        <description>Class Turtle
+Intended for educational purpose.</description>
+        <long-description>With a turtle object you can program turtle graphics in php
+and draw them on a gd image.</long-description>
+        <tag name="author" line="22" description="Hanspeter Siegfried, KZO, CH-8620 Wetzikon"/>
+        <tag name="version" line="22" description="1.0.0"/>
+        <tag name="package" line="22" description="classes"/>
+        <tag name="package" line="22" description="classes"/>
+      </docblock>
+      <property static="false" visibility="private" namespace="" line="29" package="classes">
+        <name>$imageHandle</name>
+        <full_name>\Turtle::imageHandle</full_name>
+        <default></default>
+        <docblock line="29">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="29" description="&lt;p&gt;An image resource object returned&#10;by the function imagecreatetruecolor().&lt;/p&gt;" type="\GD-Image-Handle" variable="$imageHandle">
+            <type>\GD-Image-Handle</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="private" namespace="" line="36" package="classes">
+        <name>$imageWidth</name>
+        <full_name>\Turtle::imageWidth</full_name>
+        <default></default>
+        <docblock line="36">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="36" description="&lt;p&gt;The width of the image handled by the image resource &#10;passed to the constructor&lt;/p&gt;" type="integer" variable="$imageWidth">
+            <type>integer</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="private" namespace="" line="42" package="classes">
+        <name>$imageHeight</name>
+        <full_name>\Turtle::imageHeight</full_name>
+        <default></default>
+        <docblock line="42">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="42" description="&lt;p&gt;The height of the image ... @see @var $imagewidth&lt;/p&gt;" type="integer" variable="$imageHeight">
+            <type>integer</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="private" namespace="" line="48" package="classes">
+        <name>$xPos</name>
+        <full_name>\Turtle::xPos</full_name>
+        <default></default>
+        <docblock line="48">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="48" description="&lt;p&gt;the turtle's current x-position&lt;/p&gt;" type="integer" variable="$xPos">
+            <type>integer</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="private" namespace="" line="54" package="classes">
+        <name>$yPos</name>
+        <full_name>\Turtle::yPos</full_name>
+        <default></default>
+        <docblock line="54">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="54" description="&lt;p&gt;the turtle's current y-position&lt;/p&gt;" type="integer" variable="$yPos">
+            <type>integer</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="private" namespace="" line="60" package="classes">
+        <name>$penColor</name>
+        <full_name>\Turtle::penColor</full_name>
+        <default></default>
+        <docblock line="60">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="60" description="&lt;p&gt;A color identifier usable for the GD image object, representing the actual pen color.&lt;/p&gt;" type="integer" variable="$penColor">
+            <type>integer</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="private" namespace="" line="66" package="classes">
+        <name>$penWidth</name>
+        <full_name>\Turtle::penWidth</full_name>
+        <default></default>
+        <docblock line="66">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="66" description="&lt;p&gt;The pen's width in pixels&lt;/p&gt;" type="integer" variable="$penWidth">
+            <type>integer</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="private" namespace="" line="72" package="classes">
+        <name>$angle</name>
+        <full_name>\Turtle::angle</full_name>
+        <default></default>
+        <docblock line="72">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="72" description="&lt;p&gt;The turtle's current heading in radians&lt;/p&gt;" type="float" variable="$angle">
+            <type>float</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="private" namespace="" line="78" package="classes">
+        <name>$isPenDown</name>
+        <full_name>\Turtle::isPenDown</full_name>
+        <default></default>
+        <docblock line="78">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="78" description="&lt;p&gt;Whether the turtle's pen is currently down or not.&lt;/p&gt;" type="boolean" variable="">
+            <type>boolean</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="" line="84" package="classes">
+        <name>$firephp</name>
+        <full_name>\Turtle::firephp</full_name>
+        <default></default>
+        <docblock line="84">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="84" description="&lt;p&gt;an instance of the FirePHP.class. Can be NULL.&lt;/p&gt;" type="\FirePHP" variable="">
+            <type>\FirePHP</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="95" package="classes">
+        <name>__construct</name>
+        <full_name>\Turtle::__construct()</full_name>
+        <docblock line="95">
+          <description>Constructor method</description>
+          <long-description></long-description>
+          <tag name="param" line="95" description="&lt;p&gt;An image resource identifier returned by&#10;the function imagecreatetruecolor() or imagecreate()&lt;/p&gt;" type="resource" variable="$imageHandle">
+            <type>resource</type>
+          </tag>
+          <tag name="param" line="95" description="&lt;p&gt;The width of the turtle's playground&lt;/p&gt;" type="integer" variable="$imageWidth">
+            <type>integer</type>
+          </tag>
+          <tag name="param" line="95" description="&lt;p&gt;The height of the turtle's playground&lt;/p&gt;" type="integer" variable="$imageHeight">
+            <type>integer</type>
+          </tag>
+          <tag name="param" line="95" description="&lt;p&gt;an instance of the FirePHP class. This argument is optional.&#10;It can be useful for debugging.&lt;/p&gt;" type="\FirePHP" variable="$firePHP">
+            <type>\FirePHP</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="true">
+          <name>$imageHandle</name>
+          <default></default>
+          <type>resource</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$imageWidth</name>
+          <default></default>
+          <type>integer</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$imageHeight</name>
+          <default></default>
+          <type>integer</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$firePHP</name>
+          <default>NULL</default>
+          <type>\FirePHP</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="123" package="classes">
+        <name>getPenColor</name>
+        <full_name>\Turtle::getPenColor()</full_name>
+        <docblock line="123">
+          <description>Returns the color identifier (an integer) of the turtle's pen color.</description>
+          <long-description>This color identifier can be used as argument for any draw function
+applied directly to the image resource.</long-description>
+          <tag name="return" line="123" description="the color identifier of the turtle's current pen color&#10;(compatible to PHP's GD image functions)" type="integer">
+            <type>integer</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="133" package="classes">
+        <name>getPenRed</name>
+        <full_name>\Turtle::getPenRed()</full_name>
+        <docblock line="133">
+          <description>Returns the amount of red in the turtle's pen color.</description>
+          <long-description></long-description>
+          <tag name="return" line="133" description="An integer between 0 and 255 meaning the amount of red in&#10;the turtle's pen color" type="\integer:">
+            <type>\integer:</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="143" package="classes">
+        <name>getPenGreen</name>
+        <full_name>\Turtle::getPenGreen()</full_name>
+        <docblock line="143">
+          <description>Returns the amount of green in the turtle's pen color.</description>
+          <long-description></long-description>
+          <tag name="return" line="143" description="An integer between 0 and 255 meaning the amount of green&#10;in the turtle's pen color" type="\integer:">
+            <type>\integer:</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="153" package="classes">
+        <name>getPenBlue</name>
+        <full_name>\Turtle::getPenBlue()</full_name>
+        <docblock line="153">
+          <description>Returns the amount of blue in the turtle's pen color</description>
+          <long-description></long-description>
+          <tag name="return" line="153" description="An integer between 0 and 255 meaning the amount of blue&#10;in the turtle's pen color" type="\integer:">
+            <type>\integer:</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="162" package="classes">
+        <name>getPenWidth</name>
+        <full_name>\Turtle::getPenWidth()</full_name>
+        <docblock line="162">
+          <description>Returns the width of the turtle's pen as an integer (in pixels)</description>
+          <long-description></long-description>
+          <tag name="return" line="162" description="the current width of the turtle's pen (in pixels)" type="integer">
+            <type>integer</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="171" package="classes">
+        <name>isPenDown</name>
+        <full_name>\Turtle::isPenDown()</full_name>
+        <docblock line="171">
+          <description>Returns the information, whether the turtle's pen is currently down.</description>
+          <long-description></long-description>
+          <tag name="return" line="171" description="Whether the turtle's pen is currently down or not." type="boolean">
+            <type>boolean</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="180" package="classes">
+        <name>getX</name>
+        <full_name>\Turtle::getX()</full_name>
+        <docblock line="180">
+          <description>Returns the turtle's current x ordinate.</description>
+          <long-description></long-description>
+          <tag name="return" line="180" description="The turtle's current x-position" type="integer">
+            <type>integer</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="189" package="classes">
+        <name>getY</name>
+        <full_name>\Turtle::getY()</full_name>
+        <docblock line="189">
+          <description>Returns the turtle's current y ordinate</description>
+          <long-description></long-description>
+          <tag name="return" line="189" description="The turtle's current y-position" type="integer">
+            <type>integer</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="200" package="classes">
+        <name>setPenColor</name>
+        <full_name>\Turtle::setPenColor()</full_name>
+        <docblock line="200">
+          <description>Sets the turtle's pen color.</description>
+          <long-description></long-description>
+          <tag name="param" line="200" description="&lt;p&gt;The amount of red (decimal number between 0 and 250)&lt;/p&gt;" type="integer" variable="$red">
+            <type>integer</type>
+          </tag>
+          <tag name="param" line="200" description="&lt;p&gt;The amount of green (decimal number between 0 and 250)&lt;/p&gt;" type="integer" variable="$green">
+            <type>integer</type>
+          </tag>
+          <tag name="param" line="200" description="&lt;p&gt;The amount of blue (decimal number between 0 and 250)&lt;/p&gt;" type="integer" variable="$blue">
+            <type>integer</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$red</name>
+          <default></default>
+          <type>integer</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$green</name>
+          <default></default>
+          <type>integer</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$blue</name>
+          <default></default>
+          <type>integer</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="210" package="classes">
+        <name>setPenWidth</name>
+        <full_name>\Turtle::setPenWidth()</full_name>
+        <docblock line="210">
+          <description>Sets the width of the turtle's pen.</description>
+          <long-description></long-description>
+          <tag name="param" line="210" description="&lt;p&gt;The new width of the turtle's pen. In Pixels.&lt;/p&gt;" type="integer" variable="$penWidth">
+            <type>integer</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$penWidth</name>
+          <default></default>
+          <type>integer</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="220" package="classes">
+        <name>penDown</name>
+        <full_name>\Turtle::penDown()</full_name>
+        <docblock line="220">
+          <description>Puts the turtle's pen onto the canvas.</description>
+          <long-description></long-description>
+          <tag name="return" line="220" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="229" package="classes">
+        <name>penUp</name>
+        <full_name>\Turtle::penUp()</full_name>
+        <docblock line="229">
+          <description>Takes the turtle's pen off the canvas.</description>
+          <long-description></long-description>
+          <tag name="return" line="229" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="239" package="classes">
+        <name>forward</name>
+        <full_name>\Turtle::forward()</full_name>
+        <docblock line="239">
+          <description>Lets the turtle go forward (in the direction of its current heading). The argument passed
+is the desired distance in pixels.</description>
+          <long-description></long-description>
+          <tag name="param" line="239" description="&lt;p&gt;moves the turtle for the distance passed as argument (in pixels)&lt;/p&gt;" type="integer" variable="$strecke">
+            <type>integer</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$strecke</name>
+          <default></default>
+          <type>integer</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="269" package="classes">
+        <name>setAngle</name>
+        <full_name>\Turtle::setAngle()</full_name>
+        <docblock line="269">
+          <description>Sets the turtle's heading. The argument passed is an integer meaning degrees.</description>
+          <long-description></long-description>
+          <tag name="param" line="269" description="&lt;p&gt;The new heading of the turtle. In degrees&lt;/p&gt;" type="integer" variable="$newAngleDegrees">
+            <type>integer</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$newAngleDegrees</name>
+          <default></default>
+          <type>integer</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="278" package="classes">
+        <name>turn</name>
+        <full_name>\Turtle::turn()</full_name>
+        <docblock line="278">
+          <description>Lets the turtle turn right by an angle (in degrees) passed as argument.</description>
+          <long-description>An integer below zero lets it turn left.</long-description>
+          <tag name="param" line="278" description="&lt;p&gt;The angle to turn. In degrees.&lt;/p&gt;" type="integer" variable="$angleDegrees">
+            <type>integer</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$angleDegrees</name>
+          <default></default>
+          <type>integer</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="289" package="classes">
+        <name>jumpTo</name>
+        <full_name>\Turtle::jumpTo()</full_name>
+        <docblock line="289">
+          <description>Lets the turtle jump to a new place
+With this method the turtle moves without drawing, even if it's pen is down.</description>
+          <long-description></long-description>
+          <tag name="param" line="289" description="&lt;p&gt;The new x-position&lt;/p&gt;" type="integer" variable="$newX">
+            <type>integer</type>
+          </tag>
+          <tag name="param" line="289" description="&lt;p&gt;The new y-position&lt;/p&gt;" type="integer" variable="$newY">
+            <type>integer</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$newX</name>
+          <default></default>
+          <type>integer</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$newY</name>
+          <default></default>
+          <type>integer</type>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50001">Only one @package tag is allowed</error>
+      <error line="95" code="PPC:ERR-50015">Argument $imageHandle is missing from the Docblock of __construct</error>
+      <error line="200" code="PPC:ERR-50015">Argument $red is missing from the Docblock of setPenColor</error>
+      <error line="210" code="PPC:ERR-50015">Argument $penWidth is missing from the Docblock of setPenWidth</error>
+      <error line="239" code="PPC:ERR-50015">Argument $strecke is missing from the Docblock of forward</error>
+      <error line="269" code="PPC:ERR-50015">Argument $newAngleDegrees is missing from the Docblock of setAngle</error>
+      <error line="278" code="PPC:ERR-50015">Argument $angleDegrees is missing from the Docblock of turn</error>
+      <error line="289" code="PPC:ERR-50015">Argument $newX is missing from the Docblock of jumpTo</error>
+    </parse_markers>
+    <source>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</source>
+  </file>
+  <package name="classes" full_name="classes"/>
+  <package name="global" full_name="global"/>
+  <namespace name="global" full_name="global"/>
+  <deprecated count="0"/>
+</project>
