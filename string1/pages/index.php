@@ -11,6 +11,7 @@ $vorstellung = "";
 <head>
 <meta charset="utf-8">
 <title>String-&Uuml;bungen</title>
+<link rel="stylesheet" href="../style/string1.css">
 </head>
 
 
@@ -21,7 +22,8 @@ $vorstellung = "";
 
 <p>
 <?php 
-
+// Auf der naechsten Zeile wird der Inhalt von $vorstellung ausgegeben:
+print($vorstellung);
 ?>
 </p>
 

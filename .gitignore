@@ -5,10 +5,6 @@
 object2/doc/
 .DS_Store
 phpDocumentor.phar
-=======
-.metadata/
->>>>>>> fda369e11858ea43c9afc58fdc738b8e5e8c9b5d
-=======
+
 .metadata/*
->>>>>>> c0c4d235e1c5205fe49061b9b57634de1de510e4
-/nbproject/private/
+
