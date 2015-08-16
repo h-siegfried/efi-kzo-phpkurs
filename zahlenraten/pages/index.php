@@ -9,7 +9,7 @@ $max = 16;
 // oder ob der Benutzer ein neues Spiel beginnen moechte:
 if((!isset($_POST)) || isset($_POST['neuesSpiel'])) {
 	
-	// In diesem Fall muessen wir eine neue Zufallszahl erzeugen!
+	// Wenn dies der Fall ist, muessen wir eine neue Zufallszahl erzeugen!
 	// Programmieren Sie das und weisen Sie die Zufallszahl der Variable
 	// $meineZahl zu.
 	
