@@ -89,10 +89,10 @@ class Begruesser
 		elseif ($this->alter >= 4 ) {
 			switch($this->hoeflichkeit)
 			{
-				case 1: 
+				case 4: 
 					$begruessung = "hallo man, ales guet?";
 					break;
-				case 2:
+				case 3:
 					if($nutzerGeschlecht == "m") {
 						$begruessung = "Gr&uuml;ezi, Herr " . $nutzerName;
 					}
@@ -104,7 +104,7 @@ class Begruesser
 								$nutzerVorname, $nutzerName);
 					}
 					break;
-				case 3:
+				case 2:
 					$bestTeil = "";
 					if($nutzerGeschlecht == "m") {
 						$bestTeil = "Sehr verehrter Herr ";
@@ -119,7 +119,7 @@ class Begruesser
 							$nutzerName,
 							$this->name) ;
 					break;
-				case 4:
+				case 1:
 					$begruessung = "Entschuldigung, so h&ouml;flich kann ich gar nicht sein.";
 					
 			}  // End of switch statement
