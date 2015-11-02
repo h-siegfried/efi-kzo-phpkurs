@@ -1,5 +1,5 @@
 <?php
-
+$gruss = "Hallo Welt!";
 ?>
  
  
@@ -43,7 +43,7 @@ Im n&auml;chsten Absatz erscheint die Ausgabe meines PHP-Programms:
 <?php 
 // Auf der folgenden Zeile können Sie 
 // die Ausgabe programmieren.
-
+print($gruss);
 ?>
 </p>
 

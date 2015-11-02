@@ -5,5 +5,8 @@
         <group name="Normalgruppe">
             <file>file:/Applications/MAMP/htdocs/phpkurs/farbverlauf/pages/verlauf.php</file>
         </group>
+        <group>
+            <file>file:/opt/lampp/htdocs/phpkurs/Linienmuster_1/pages/voruebung_linienmuster.php</file>
+        </group>
     </open-files>
 </project-private>
