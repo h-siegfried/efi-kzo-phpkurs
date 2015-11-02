@@ -79,6 +79,9 @@ imagefill($img, 0, 0, $hintergrund);
 
 // Nun haben Sie die Anzahl aller Punkte und derjenigen, die im
 // Kreisbogen liegen. Berechnen Sie daraus Pi
+// Fuer die Berechnung koennen Sie die Wikipedia unter
+// https://de.wikipedia.org/wiki/Monte-Carlo-Algorithmus
+// nachschlagen.
 // und weisen Sie das Resultat der Variable $ausgabe zu.
 $ausgabe = "";
 
