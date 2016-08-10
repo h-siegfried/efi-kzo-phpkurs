@@ -4,4 +4,5 @@
 object2/doc/
 .DS_Store
 phpDocumentor.phar
+*.idea
 
