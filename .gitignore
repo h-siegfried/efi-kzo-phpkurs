@@ -1,6 +1,4 @@
 
-.metadata/
-.metadata/.log/
 object2/doc/
 .DS_Store
 phpDocumentor.phar
