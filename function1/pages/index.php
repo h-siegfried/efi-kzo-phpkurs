@@ -56,7 +56,7 @@ imagepng($img, "../images/bild.png");
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Erste &Uuml;bung mit Objekten</title>
+<title>Aufgabe function1</title>
 <link rel="stylesheet" href="../stylesheets/styles_schleife1.css" />
 </head>
 <body>
