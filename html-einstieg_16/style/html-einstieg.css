@@ -4,7 +4,8 @@
 
 body {
     background-color: #eeeeee;
-    width: 900px;
+    width:95%;
+    margin-left: 1em;
 }
 
 /* Grundsätzliches zu Schriftart und -farbe
@@ -37,11 +38,14 @@ h1 {
 
 h2 {
     font-size: large;
-    margin-top: 1.5em;
+    margin-top: 2.5em;
+    margin-bottom: 1.5em;
 }
 
 h3 {
     font-size: medium;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
 }
 
 /*
@@ -51,12 +55,14 @@ h3 {
 
 p {
     font-size: medium;
-    margin-top: 0.5em;
+    line-height: 120%;
+    margin-top: 1em;
     margin-bottom: 0.5em;
 }
 
 li {
     margin-top: 1em;
+    line-height: 120%;
 }
 
 /* Angaben zur Formatierung von Tabellen
