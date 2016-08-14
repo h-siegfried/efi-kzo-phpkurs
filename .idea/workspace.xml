@@ -1,27 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="31440ae4-c056-47e5-a887-ae6091a527ef" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/php.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/operationen/pages/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/operationen/style/operationen.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/turtletest/index.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FirePHPCore/FirePHP.class.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FirePHPCore/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FirePHPCore/fb.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/object3/.buildpath" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/object3/.project" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/object3/.settings/org.eclipse.core.resources.prefs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/object3/.settings/org.eclipse.php.core.prefs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/object3/.settings/org.eclipse.wst.common.project.facet.core.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/object3/pages/index.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/object3/style/styles_object2.css" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Turtle_class/Turtle.php" afterPath="$PROJECT_DIR$/Turtle_class/Turtle.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/random/pages/index.php" afterPath="$PROJECT_DIR$/random/pages/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/schleife1/pages/index.php" afterPath="$PROJECT_DIR$/schleife1/pages/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vieleckdreieck/pages/vieleckdreieck.php" afterPath="$PROJECT_DIR$/vieleckdreieck/pages/vieleckdreieck.php" />
-    </list>
+    <list default="true" id="31440ae4-c056-47e5-a887-ae6091a527ef" name="Default" comment="" />
     <ignored path="phpkurs.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -42,13 +22,11 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/operationen/pages/index.php">
+        <entry file="file://$PROJECT_DIR$/string1/pages/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-              <folding>
-                <element signature="e#6#83#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -262,10 +240,6 @@
               <option name="myItemId" value="operationen" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="style" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -369,16 +343,16 @@
       <workItem from="1471099522311" duration="361000" />
       <workItem from="1471100703893" duration="2651000" />
       <workItem from="1471115209302" duration="58000" />
-      <workItem from="1471115304153" duration="4693000" />
+      <workItem from="1471115304153" duration="4891000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13590000" />
+    <option name="totallyTimeSpent" value="13788000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="40" y="23" width="1400" height="873" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20397644" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -389,7 +363,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39948782" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39948782" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -412,12 +386,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/operationen/pages/index.php</url>
-          <line>26</line>
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="1" />
     </breakpoint-manager>
     <watches-manager />
@@ -630,11 +598,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/operationen/pages/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
+        <state relative-caret-position="261">
           <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding>
             <element signature="e#6#83#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/string1/pages/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
