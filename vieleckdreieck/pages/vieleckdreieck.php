@@ -1,11 +1,9 @@
 <?php
 ob_start();
 require_once('../../Turtle_class/Turtle.php');
-require_once('../../FirePHPCore/FirePHP.class.php');
 
 // Ein Objekt der Klasse FirePHP erzeugen
-$firephp = FirePHP::getInstance(true);
-$firephp->setEnabled(true);
+
 
 $imgWidth= 600;
 $imgHeight = 600;
@@ -25,7 +23,8 @@ imagefill($img, 0, 0, $hintergrund);
 // damit die Turtle nicht nur "geht", sondern auch
 // sichtbare Spuren hinterlässt.
 
-
+$zeichner = new Turtle($img,600,500);
+$zeichner->penDown();
 
 // wurde anzahlEcken, anzahlZeilen und seitenLaenge schon angegeben?
 // Machen Sie die gesamte Programm-Ausfuehrung davon abhaengig.
@@ -36,7 +35,6 @@ imagefill($img, 0, 0, $hintergrund);
 // Wenn es ein leerer String ist, wird es einfach als 0 interpretiert.
 // Der Wert 0 wird von empty() ausgeschlossen, soll aber doch moeglich sein.
 
-$firephp->log($_POST);
 if(true) { // Sie muessen natuerlich "true" durch Ihre Bedingung ersetzen ;-)
 	
 	// Weisen Sie zuerst die Elementen von $_POST Variablen zu, die 

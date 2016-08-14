@@ -8,7 +8,7 @@ $zufallszahl;
 
 <head>
 <meta charset="utf-8">
-<title>Erste &Uuml;bungen mit Zahlen</title>
+<title>Übungen mit Zufallszahlen</title>
 <link rel="stylesheet" href="../style/styles_string2.css" />
 </head>
 
