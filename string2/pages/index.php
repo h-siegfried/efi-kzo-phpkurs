@@ -1,6 +1,11 @@
 <?php
 $vollname = "Barack Obama";
-$start; 
+
+// Hier werden die Variablen $start und $nachname
+// erst einmal deklariert.
+// Sie werden ihnen danach die Rückgaben der Funktionen
+// stripos() bzw. substr() zuweisen.
+$start;
 $nachname;
 
 ?>
@@ -23,7 +28,7 @@ Der Nachname.</p>
 
 <p>
 <?php 
-print($nachname);
+
 ?>
 </p>
 

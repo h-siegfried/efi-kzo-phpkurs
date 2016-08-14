@@ -1,6 +1,5 @@
 <?php 
-$antwort_teil1 = "Ihr Rateversuch ist ";
-$antwort_teil2 = "";
+$antwort = "";
 $min = 1;
 $max = 16;
 
@@ -12,11 +11,15 @@ if((!isset($_POST)) || isset($_POST['neuesSpiel'])) {
 	// Wenn dies der Fall ist, muessen wir eine neue Zufallszahl erzeugen!
 	// Programmieren Sie das und weisen Sie die Zufallszahl der Variable
 	// $meineZahl zu.
-	
+	// Minimum und Maximum für die Zufallszahl sind bereits
+	// den Variablen $min und $max zugewisen.
 
 
 }
-else{  // Ein Spiel ist am Laufen, Geheimzahl reaktivieren:
+else{  // Ein Spiel ist am Laufen, Geheimzahl reaktivieren!
+	// Die Geheimzahl wird dem Server bei jedem Rateversuch
+	// Automatisch mitgeteilt, und zwar über die
+	// Variable $_POST['geheimzahl'] .
 	$meineZahl = $_POST['geheimzahl'];
 }
 
@@ -47,7 +50,7 @@ if(isset($_POST['rateversuch'])) { // Ein Rate-Versuch ist abgeschickt worden
 }  // Ende des Falles, dass ein Rateversuch abgeschickt worden ist.
 else { // Es ist kein Rateversuch abgeschickt worden.
 	$versuch = 0;
-	$antwort_teil2 = "noch nicht erfolgt.";
+	$antwort = "noch nicht erfolgt.";
 }
 
 ?>
@@ -69,6 +72,7 @@ else { // Es ist kein Rateversuch abgeschickt worden.
 	<div id="feedback">
 		<h2>Die Antwort</h2>
 		<p>
+			Ihr Rateversuch liegt
 			<?php 
 			// Programmieren Sie hier mit der Funktion print(),
 			// dass die Antwort ausgegeben wird.

@@ -1,6 +1,8 @@
 <?php
 $zufallszahl;
 
+
+
 ?>
 
 <!DOCTYPE html>
@@ -19,6 +21,7 @@ $zufallszahl;
 <p>Im n&auml;chsten Absatz erscheint die Ausgabe meiner Zufallszahl.</p>
 
 <p>
+    Die Zufallszahl:
 <?php 
 
 ?>
