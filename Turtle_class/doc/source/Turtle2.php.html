@@ -1,4 +1,40 @@
-<?php
+<html>
+    <head>
+        <script
+            type="text/javascript"
+            src="../js/jquery-1.4.2.min.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../syntax_highlighter/scripts/shCore.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../syntax_highlighter/scripts/shBrushJScript.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../syntax_highlighter/scripts/shBrushPhp.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../syntax_highlighter/scripts/shBrushXml.js">
+        </script>
+        <link
+            href="../syntax_highlighter/styles/shCore.css" rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="../syntax_highlighter/styles/shCoreEclipse.css"
+            rel="stylesheet" type="text/css"
+        />
+        <link
+            href="../syntax_highlighter/styles/shThemeWordpress.css"
+            rel="stylesheet" type="text/css"
+        />
+    </head>
+    <body>
+        <pre class="brush: php">&lt;?php
 /**
  * This file contains the Turtle class
  * intended for turtle graphic programming
@@ -16,8 +52,9 @@
  * With a turtle object you can program turtle graphics in php
  * and draw them on a gd image.
  * @author Hanspeter Siegfried, KZO, CH-8620 Wetzikon
- * @package classes
- * @version 1.0.0
+ * @version 1.2.0
+ *
+ * @Todo Bei sehr kleinen Drehwinkeln wird offenbar falsch gerundet.
  *
  */
 class Turtle
@@ -44,13 +81,13 @@ class Turtle
 
 	/**
 	 * 
-	 * @var integer $xPos the turtle's current x-position
+	 * @var float $xPos the turtle's current x-position
 	 */
 	private $xPos;
 
 	/**
 	 * 
-	 * @var integer $yPos the turtle's current y-position
+	 * @var float $yPos the turtle's current y-position
 	 */
 	private $yPos;
 
@@ -78,39 +115,33 @@ class Turtle
 	 */
 	private $isPenDown;
 
-	/**
-	 * 
-	 * @var FirePHP an instance of the FirePHP.class. Can be NULL.
-	 */
-	protected $firephp;
+
 
 	/**
 	 * Constructor method
 	 * @param resource $imageHandle An image resource identifier returned by
 	 * the function imagecreatetruecolor() or imagecreate()
-	 * @param integer $imageWidth The width of the turtle's playground
-	 * @param integer $imageHeight The height of the turtle's playground
-	 * @param FirePHP $firePHP an instance of the FirePHP class. This argument is optional.
-	 * It can be useful for debugging.
+
+
 	 */
-	function __construct(&$imageHandle, $imageWidth, $imageHeight, $firePHP = NULL)
+	function __construct(&amp;$imageHandle)
 	{
 		if(!is_resource($imageHandle)) {
-			throw new InvalidArgumentException("Sie muessen dem Konstruktor 
+			throw new InvalidArgumentException(&quot;Sie muessen dem Konstruktor 
 				der Klasse Turtle als 1. Parameter eine Image-Resource uebergeben, 
-				der Konstruktor hat stattdessen den Wert NULL erhalten.",E_USER_ERROR);
+				der Konstruktor hat stattdessen den Wert NULL erhalten.&quot;,E_USER_ERROR);
 		}
-		$this->imageHandle = $imageHandle;
-		$this->imageWidth = $imageWidth;
-		$this->imageHeight = $imageHeight;
-		$this->xPos = $this->imageWidth / 2;
-		$this->yPos = $this->imageHeight / 2;
-		$this->angle = 0.0;
-		$this->penColor = imagecolorallocate($imageHandle, 0, 0, 0);
-		$this->isPenDown = FALSE;
-		if($firePHP != NULL) {
-			$this->firephp = $firePHP;
-		}
+		$this-&gt;imageHandle = $imageHandle;
+
+
+		$this-&gt;imageWidth = imagesx($imageHandle);
+		$this-&gt;imageHeight = imagesy($imageHandle);
+		$this-&gt;xPos = $this-&gt;imageWidth / 2;
+		$this-&gt;yPos = $this-&gt;imageHeight / 2;
+		$this-&gt;angle = 0.0;
+		$this-&gt;penColor = imagecolorallocate($imageHandle, 0, 0, 0);
+		$this-&gt;isPenDown = FALSE;
+
 
 	}
 	
@@ -123,7 +154,7 @@ class Turtle
 	 */
 	public function getPenColor()
 	{
-		return $this->penColor;
+		return $this-&gt;penColor;
 	}
 	
 	/**
@@ -133,7 +164,7 @@ class Turtle
 	 */
 	public function getPenRed()
 	{
-		return imagecolorsforindex($this->imageHandle, $this->penColor)['red'];
+		return imagecolorsforindex($this-&gt;imageHandle, $this-&gt;penColor)['red'];
 	}
 	
 	/**
@@ -143,7 +174,7 @@ class Turtle
 	 */
 	public function getPenGreen()
 	{
-		return imagecolorsforindex($this->imageHandle, $this->penColor)['green'];		
+		return imagecolorsforindex($this-&gt;imageHandle, $this-&gt;penColor)['green'];		
 	}
 	
 	/**
@@ -153,7 +184,7 @@ class Turtle
 	 */
 	public function getPenBlue()
 	{
-		return imagecolorsforindex($this->imageHandle, $this->penColor)['blue'];
+		return imagecolorsforindex($this-&gt;imageHandle, $this-&gt;penColor)['blue'];
 	}
 	
 	/**
@@ -162,7 +193,7 @@ class Turtle
 	 */
 	public function getPenWidth()
 	{
-		return $this->penWidth;
+		return $this-&gt;penWidth;
 	}
 	
 	/**
@@ -171,7 +202,7 @@ class Turtle
 	 */
 	public function isPenDown()
 	{
-		return $this->isPenDown();
+		return $this-&gt;isPenDown();
 	}
 	
 	/**
@@ -180,7 +211,7 @@ class Turtle
 	 */
 	public function getX()
 	{
-		return $this->xPos;
+		return $this-&gt;xPos;
 	}
 	
 	/**
@@ -189,7 +220,7 @@ class Turtle
 	 */
 	public function getY()
 	{
-		return $this->yPos;
+		return $this-&gt;yPos;
 	}
 	
 	/**
@@ -198,20 +229,20 @@ class Turtle
 	 * @param integer $green The amount of green (decimal number between 0 and 250)
 	 * @param integer $blue The amount of blue (decimal number between 0 and 250)
 	 */
-	public function setPenColor($red, $green, $blue)
+	public function setPenColor(int $red, int $green, int $blue)
 	{
-		$this->penColor = imagecolorallocate($this->imageHandle, $red, $green, $blue);
-		//$this->firephp->log($this->imageHandle);
+		$this-&gt;penColor = imagecolorallocate($this-&gt;imageHandle, $red, $green, $blue);
+		//$this-&gt;firephp-&gt;log($this-&gt;imageHandle);
 	}
 
 	/**
 	 * Sets the width of the turtle's pen. 
 	 * @param integer $penWidth The new width of the turtle's pen. In Pixels.
 	 */
-	public function setPenWidth($penWidth)
+	public function setPenWidth(int $penWidth)
 	{
-		$this->penWidth = $penWidth;
-		imagesetthickness($this->imageHandle, $penWidth);
+		$this-&gt;penWidth = $penWidth;
+		imagesetthickness($this-&gt;imageHandle, $penWidth);
 	}
 
 	/**
@@ -220,7 +251,7 @@ class Turtle
 	 */
 	public function penDown()
 	{
-		$this->isPenDown = TRUE;
+		$this-&gt;isPenDown = TRUE;
 	}
 
 	/**
@@ -229,56 +260,57 @@ class Turtle
 	 */
 	public function penUp()
 	{
-		$this->isPenDown = FALSE;
+		$this-&gt;isPenDown = FALSE;
 	}
 
 	/**
 	 * Lets the turtle go forward (in the direction of its current heading). The argument passed
 	 * is the desired distance in pixels.
-	 * @param integer $strecke moves the turtle for the distance passed as argument (in pixels)
+	 * @param float $strecke moves the turtle for the distance passed as argument (in pixels)
 	 */
-	public function forward($strecke)
+	public function forward(float $strecke)
 	{
 
-		$newX = $this->xPos + round($strecke * cos($this->angle));
-		$newY = $this->yPos + round($strecke * sin($this->angle));
-// 		if(isset($this->firephp)) {
-// 			$this->firephp->log(array(
-// 					"angle" => $this->angle,
-// 					"sinus" => (sin($this->angle)),
-// 					"delta-y" => round($strecke * sin($this->angle))), "Berechnung von Delta-y");
-// 			$this->firephp->log($newX, "newX");
-// 			$this->firephp->log($newY, "newY");
+		$newX = $this-&gt;xPos + round($strecke * cos($this-&gt;angle));
+		$newY = $this-&gt;yPos + round($strecke * sin($this-&gt;angle));
+// 		if(isset($this-&gt;firephp)) {
+// 			$this-&gt;firephp-&gt;log(array(
+// 					&quot;angle&quot; =&gt; $this-&gt;angle,
+// 					&quot;sinus&quot; =&gt; (sin($this-&gt;angle)),
+// 					&quot;delta-y&quot; =&gt; round($strecke * sin($this-&gt;angle))), &quot;Berechnung von Delta-y&quot;);
+// 			$this-&gt;firephp-&gt;log($newX, &quot;newX&quot;);
+// 			$this-&gt;firephp-&gt;log($newY, &quot;newY&quot;);
 // 		}
 
-		if($this->isPenDown) {
-			imageline($this->imageHandle, $this->xPos, $this->yPos, $newX, $newY, $this->penColor);
+		if($this-&gt;isPenDown) {
+			imageline($this-&gt;imageHandle, round($this-&gt;xPos), round($this-&gt;yPos),
+                round($newX), round($newY), $this-&gt;penColor);
 		}
 		else{
-			$this->jumpTo($newX, $newY);
+			$this-&gt;jumpTo($newX, $newY);
 		}
 
-		$this->xPos = $newX;
-		$this->yPos = $newY;
+		$this-&gt;xPos = $newX;
+		$this-&gt;yPos = $newY;
 	}
 
 
 	/**
 	 * Sets the turtle's heading. The argument passed is an integer meaning degrees.
-	 * @param integer $newAngleDegrees  The new heading of the turtle. In degrees
+	 * @param float $newAngleDegrees  The new heading of the turtle. In degrees
 	 */
-	public function setAngle($newAngleDegrees) {
-		$this->angle = $newAngleDegrees * pi() / 180;
+	public function setAngle(float $newAngleDegrees) {
+		$this-&gt;angle = $newAngleDegrees * pi() / 180;
 	}
 
 	/**
 	 * Lets the turtle turn right by an angle (in degrees) passed as argument.
 	 * An integer below zero lets it turn left.
-	 * @param integer $angleDegrees The angle to turn. In degrees.
+	 * @param float $angleDegrees The angle to turn. In degrees.
 	 */
-	public function turn($angleDegrees)
+	public function turn(float $angleDegrees)
 	{
-		$this->angle += $angleDegrees * pi() / 180;
+		$this-&gt;angle += $angleDegrees * pi() / 180;
 	}
 
 	/**
@@ -289,8 +321,16 @@ class Turtle
 	 */
 	public function jumpTo($newX, $newY)
 	{
-		$this->xPos = $newX;
-		$this->yPos = $newY;
+		$this-&gt;xPos = $newX;
+		$this-&gt;yPos = $newY;
 	}
 }
-?>
+?&gt;</pre>
+        <script type="text/javascript">
+             SyntaxHighlighter.all();
+             jQuery('.gutter div').each(function(key, data){
+                jQuery(data).prepend('<a name="L'+jQuery(data).text()+'"/>');
+             });
+        </script>
+    </body>
+</html>

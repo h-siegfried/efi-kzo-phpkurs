@@ -2,55 +2,59 @@
 $antwort = "";
 $min = 1;
 $max = 16;
+$meineZahl;
 
 
-// Hier wird geprueft, ob dies der erste Seitenaufruf ist,
-// oder ob der Benutzer ein neues Spiel beginnen moechte:
-if((!isset($_POST)) || isset($_POST['neuesSpiel'])) {
-	
-	// Wenn dies der Fall ist, muessen wir eine neue Zufallszahl erzeugen!
-	// Programmieren Sie das und weisen Sie die Zufallszahl der Variable
-	// $meineZahl zu.
-	// Minimum und Maximum für die Zufallszahl sind bereits
-	// den Variablen $min und $max zugewisen.
+// Pruefen Sie hier, ob dies der erste Seitenaufruf ist,
+// oder ob der Benutzer ein neues Spiel beginnen moechte.
+// Ein Tipp: Im HTML-Formular unten gibt es einen entsprechenden Button.
+
+// Wenn dies der Fall ist, muessen wir eine neue Zufallszahl erzeugen!
+// Programmieren Sie das und weisen Sie die Zufallszahl der Variable
+// $meineZahl zu.
+// Minimum und Maximum für die Zufallszahl sind bereits
+// den Variablen $min und $max zugewisen.
 
 
-}
-else{  // Ein Spiel ist am Laufen, Geheimzahl reaktivieren!
+
+
+// "SONST":
+  // Ein Spiel ist am Laufen -- also muessen wir die Geheimzahl reaktivieren!
 	// Die Geheimzahl wird dem Server bei jedem Rateversuch
 	// Automatisch mitgeteilt, und zwar über die
 	// Variable $_POST['geheimzahl'] .
 	$meineZahl = $_POST['geheimzahl'];
-}
 
 
-// Hier wird geprueft, ob der Benutzer ueberhaupt schon
+
+// Pruefen Sie in der Folge, ob der Benutzer ueberhaupt schon
 // einen Rateversuch eingegeben und abgeschickt hat.
-if(isset($_POST['rateversuch'])) { // Ein Rate-Versuch ist abgeschickt worden
-	// Den Rateversuch der Benutzerin uebernehmen:
-	$versuch = $_POST['rateversuch'];
 
-	// Programmieren Sie hier die Fallunterscheidung:
-	// Der Antwortversuch steht unter der Variable $versuch
-	// zur Verfuegung.
-	// Weisen Sie der Variable $antwort_teil2 den passenden
-	// String zu, je nachdem, ob die Antwort zu hoch,
-	// zu niedrig oder genau richtig war!
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-}  // Ende des Falles, dass ein Rateversuch abgeschickt worden ist.
-else { // Es ist kein Rateversuch abgeschickt worden.
-	$versuch = 0;
-	$antwort = "noch nicht erfolgt.";
+
+// Wenn ja: Uebernehmen Sie den Rateversuch der Benutzerin
+// in die Variable $versuch:
+
+
+// Programmieren Sie hier die Fallunterscheidung:
+// Der Antwortversuch steht unter der Variable $versuch
+// zur Verfuegung.
+// Weisen Sie der Variable $antwort_teil2 den passenden
+// String zu, je nachdem, ob die Antwort zu hoch,
+// zu niedrig oder genau richtig war!
+
+
+
+
+
+
+
+// Ende des Falles, dass ein Rateversuch abgeschickt worden ist.
+// SONST...
+// Fahren Sie mit else weiter: Programmieren Sie hier die Reaktion darauf
+// dass die Benutzerin noch keinen Rateversuch abgeschickt hat.
+// Weisen Sie der Variable $antwort einen entsprechenden String zu.
+
+
 }
 
 ?>

@@ -81,7 +81,7 @@ class Begruesser
 	 * @param string $nutzerGeschlecht The user's gender.
 	 * @return string $begruessung The salutation string.
 	 */
-	function getBegruessung($nutzerName, $nutzerVorname, $nutzerGeschlecht) {
+	function getBegruessung(string $nutzerName, string $nutzerVorname, string $nutzerGeschlecht) {
 		$begruessung = "";
 		if($this->alter < 4) {
 			$begruessung = ("tatatatatatabwwwrrr.");

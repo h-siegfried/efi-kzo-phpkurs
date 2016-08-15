@@ -38,11 +38,11 @@ imagepng($img, "../images/bild.png");
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Erste &Uuml;bung mit Objekten</title>
+<title>Erste &Uuml;bung mit einem Turtle-Objekt</title>
 <link rel="stylesheet" href="../stylesheets/styles_schleife1.css" />
 </head>
 <body>
-<h1>Erste &Uuml;bung mit Schleifen</h1>
+<h1>Erste &Uuml;bung mit der Turtle</h1>
 <img src="../images/bild.png" />
 </body>
 </html>

@@ -31,7 +31,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">8</span></a></li>
+                <span class="label label-info">0</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -88,9 +88,6 @@ With this method the turtle moves without drawing, even if it's pen is down.</sp
 <i title="Properties" class="icon-custom icon-property"></i> Properties
                     <ul></ul>
 </li>
-<li class="nav-header protected">» Protected
-                    <ul><li class="property protected "><a href="#property_firephp" title="$firephp() :: "><span class="description">an instance of the FirePHP.class. Can be NULL.</span><pre>$firephp</pre></a></li></ul>
-</li>
 <li class="nav-header private">» Private
                     <ul>
 <li class="property private "><a href="#property_angle" title="$angle() :: "><span class="description">The turtle's current heading in radians</span><pre>$angle</pre></a></li>
@@ -130,11 +127,11 @@ and draw them on a gd image.</p></div>
 </tr>
 <tr>
 <th>version</th>
-<td>1.0.0</td>
+<td>1.2.0</td>
 </tr>
 <tr>
-<th>package</th>
-<td><a href="../packages/classes.html">classes</a></td>
+<th>Todo</th>
+<td>Bei sehr kleinen Drehwinkeln wird offenbar falsch gerundet.</td>
 </tr>
 <tr>
 <th>package</th>
@@ -145,7 +142,7 @@ and draw them on a gd image.</p></div>
 <i title="Methods" class="icon-custom icon-method"></i> Methods</h3>
 <a id="method___construct"></a><div class="element clickable method public method___construct " data-toggle="collapse" data-target=".method___construct .collapse" title="public">
 <h2>Constructor method</h2>
-<pre>__construct(resource $imageHandle, integer $imageWidth, integer $imageHeight, \FirePHP $firePHP<code> = NULL</code>) </pre>
+<pre>__construct(resource $imageHandle) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
@@ -154,29 +151,19 @@ and draw them on a gd image.</p></div>
 <h4>$imageHandle</h4>
 <code>resource</code><p>An image resource identifier returned by
 the function imagecreatetruecolor() or imagecreate()</p></div>
-<div class="subelement argument">
-<h4>$imageWidth</h4>
-<code>integer</code><p>The width of the turtle's playground</p></div>
-<div class="subelement argument">
-<h4>$imageHeight</h4>
-<code>integer</code><p>The height of the turtle's playground</p></div>
-<div class="subelement argument">
-<h4>$firePHP</h4>
-<code>\FirePHP</code><p>an instance of the FirePHP class. This argument is optional.
-It can be useful for debugging.</p></div>
 </div></div>
 </div>
 <a id="method_forward"></a><div class="element clickable method public method_forward " data-toggle="collapse" data-target=".method_forward .collapse" title="public">
 <h2>Lets the turtle go forward (in the direction of its current heading). The argument passed
 is the desired distance in pixels.</h2>
-<pre>forward(integer $strecke) </pre>
+<pre>forward(float $strecke) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$strecke</h4>
-<code>integer</code><p>moves the turtle for the distance passed as argument (in pixels)</p></div>
+<code>float</code><p>moves the turtle for the distance passed as argument (in pixels)</p></div>
 </div></div>
 </div>
 <a id="method_getPenBlue"></a><div class="element clickable method public method_getPenBlue " data-toggle="collapse" data-target=".method_getPenBlue .collapse" title="public">
@@ -302,14 +289,14 @@ With this method the turtle moves without drawing, even if it's pen is down.</h2
 </div>
 <a id="method_setAngle"></a><div class="element clickable method public method_setAngle " data-toggle="collapse" data-target=".method_setAngle .collapse" title="public">
 <h2>Sets the turtle's heading. The argument passed is an integer meaning degrees.</h2>
-<pre>setAngle(integer $newAngleDegrees) </pre>
+<pre>setAngle(float $newAngleDegrees) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$newAngleDegrees</h4>
-<code>integer</code><p>The new heading of the turtle. In degrees</p></div>
+<code>float</code><p>The new heading of the turtle. In degrees</p></div>
 </div></div>
 </div>
 <a id="method_setPenColor"></a><div class="element clickable method public method_setPenColor " data-toggle="collapse" data-target=".method_setPenColor .collapse" title="public">
@@ -344,28 +331,18 @@ With this method the turtle moves without drawing, even if it's pen is down.</h2
 </div>
 <a id="method_turn"></a><div class="element clickable method public method_turn " data-toggle="collapse" data-target=".method_turn .collapse" title="public">
 <h2>Lets the turtle turn right by an angle (in degrees) passed as argument.</h2>
-<pre>turn(integer $angleDegrees) </pre>
+<pre>turn(float $angleDegrees) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"><p>An integer below zero lets it turn left.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$angleDegrees</h4>
-<code>integer</code><p>The angle to turn. In degrees.</p></div>
+<code>float</code><p>The angle to turn. In degrees.</p></div>
 </div></div>
 </div>
 <h3>
 <i title="Properties" class="icon-custom icon-property"></i> Properties</h3>
-<a id="property_firephp"> </a><div class="element clickable property protected property_firephp" data-toggle="collapse" data-target=".property_firephp .collapse" title="protected">
-<h2>an instance of the FirePHP.class. Can be NULL.</h2>
-<pre>$firephp : \FirePHP</pre>
-<div class="row collapse"><div class="detail-description">
-<h3>Default</h3>
-<div class="subelement argument"></div>
-</div></div>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
-</div>
 <a id="property_angle"> </a><div class="element clickable property private property_angle" data-toggle="collapse" data-target=".property_angle .collapse" title="private">
 <h2>The turtle's current heading in radians</h2>
 <pre>$angle : float</pre>
@@ -440,7 +417,7 @@ passed to the constructor</h2>
 </div>
 <a id="property_xPos"> </a><div class="element clickable property private property_xPos" data-toggle="collapse" data-target=".property_xPos .collapse" title="private">
 <h2>the turtle's current x-position</h2>
-<pre>$xPos : integer</pre>
+<pre>$xPos : float</pre>
 <div class="row collapse"><div class="detail-description">
 <h3>Default</h3>
 <div class="subelement argument"></div>
@@ -450,7 +427,7 @@ passed to the constructor</h2>
 </div>
 <a id="property_yPos"> </a><div class="element clickable property private property_yPos" data-toggle="collapse" data-target=".property_yPos .collapse" title="private">
 <h2>the turtle's current y-position</h2>
-<pre>$yPos : integer</pre>
+<pre>$yPos : float</pre>
 <div class="row collapse"><div class="detail-description">
 <h3>Default</h3>
 <div class="subelement argument"></div>
@@ -464,8 +441,8 @@ passed to the constructor</h2>
 </div>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
-            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor v2.8.1</a> and<br>
-            generated on 2015-01-06T15:37:30+01:00.<br></footer></div>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.8.5</a> and<br>
+            generated on 2016-08-15T22:18:32+02:00.<br></footer></div>
 </div>
 </body>
 </html>

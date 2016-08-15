@@ -1,144 +1,150 @@
 <?xml version="1.0" encoding="utf-8"?>
-<project version="2.0.0b7&#10;">
-  <file path="Begruesser.php" generated-path="Begruesser.html" hash="843454bb969977d19dcb294b885a7842" package="classes">
+<project title="API Documentation" version="2.8.5">
+  <partials/>
+  <file path="Begruesser.php" generated-path="Begruesser.html" hash="5affeb10ada7123ea9e706b35114ea97" package="classes">
     <docblock line="0">
-      <description></description>
+      <description>This file contains the class Begruesser, intended for exercises
+in the informatics classes at kzo.ch</description>
       <long-description></long-description>
-      <tag name="package" description="classes" line="0"/>
+      <tag name="author" line="0" description="Hanspeter Siegfried, KZO, 8620 Wetzikon, Switzerland"/>
+      <tag name="package" line="0" description="classes"/>
     </docblock>
-    <class final="false" abstract="false" namespace="" line="9" package="\classes">
+    <class final="false" abstract="false" namespace="" line="13" package="classes">
       <extends/>
       <name>Begruesser</name>
       <full_name>\Begruesser</full_name>
-      <docblock line="9">
+      <docblock line="13">
         <description>Class Begruesser</description>
         <long-description></long-description>
-        <tag name="package" description="classes" line="9"/>
+        <tag name="author" line="13" description="Hanspeter Siegfried, kzo.ch"/>
+        <tag name="package" line="13" description="classes"/>
       </docblock>
-      <property static="false" visibility="private" line="14" namespace="" package="\classes">
+      <property static="false" visibility="private" namespace="" line="18" package="classes">
         <name>$hoeflichkeit</name>
+        <full_name>\Begruesser::hoeflichkeit</full_name>
         <default></default>
-        <docblock line="14">
+        <docblock line="18">
           <description></description>
           <long-description></long-description>
-          <tag name="var" description="" line="14" type="integer" variable="$hoeflichkeit">
+          <tag name="var" line="18" description="&lt;p&gt;Das Mass fuer die Hoeflichkeit der Begruessung.&lt;/p&gt;" type="integer" variable="$hoeflichkeit">
             <type>integer</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="private" line="19" namespace="" package="\classes">
+      <property static="false" visibility="private" namespace="" line="23" package="classes">
         <name>$name</name>
+        <full_name>\Begruesser::name</full_name>
         <default></default>
-        <docblock line="19">
+        <docblock line="23">
           <description></description>
           <long-description></long-description>
-          <tag name="var" description="&lt;p&gt;Der Name des Begruessers. Er wird in Abhaengigkeit vom Geschlecht automatisch gesetzt.&lt;/p&gt;" line="19" type="string" variable="$name">
+          <tag name="var" line="23" description="&lt;p&gt;Der Name des Begruessers. Er wird in Abhaengigkeit vom Geschlecht automatisch gesetzt.&lt;/p&gt;" type="string" variable="$name">
             <type>string</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="private" line="24" namespace="" package="\classes">
+      <property static="false" visibility="private" namespace="" line="28" package="classes">
         <name>$gender</name>
+        <full_name>\Begruesser::gender</full_name>
         <default></default>
-        <docblock line="24">
+        <docblock line="28">
           <description></description>
           <long-description></long-description>
-          <tag name="var" description="&lt;p&gt;Das Geschecht des Begruessers&lt;/p&gt;" line="24" type="string" variable="$gender">
+          <tag name="var" line="28" description="&lt;p&gt;Das Geschecht des Begruessers&lt;/p&gt;" type="string" variable="$gender">
             <type>string</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="private" line="29" namespace="" package="\classes">
+      <property static="false" visibility="private" namespace="" line="33" package="classes">
         <name>$alter</name>
+        <full_name>\Begruesser::alter</full_name>
         <default></default>
-        <docblock line="29">
+        <docblock line="33">
           <description></description>
           <long-description></long-description>
-          <tag name="var" description="&lt;p&gt;Das Alter des Begruessers. Es beeinflusst die Art der Begruessung.&lt;/p&gt;" line="29" type="integer" variable="$alter">
+          <tag name="var" line="33" description="&lt;p&gt;Das Alter des Begruessers. Es beeinflusst die Art der Begruessung.&lt;/p&gt;" type="integer" variable="$alter">
             <type>integer</type>
           </tag>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="41" package="\classes">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="45" package="classes">
         <name>__construct</name>
         <full_name>\Begruesser::__construct()</full_name>
-        <docblock line="41">
+        <docblock line="45">
           <description>Constructor</description>
           <long-description></long-description>
-          <tag name="param" description="&lt;p&gt;Ein Wert fuer die angestrebte Hoeflichkeit des Begruessers.&#10;1 steht fuer &quot;sehr hoch&quot;, 2 steht fuer &quot;hoch&quot;,&#10;3 fuer &quot;normal&quot;, 4 fuer &quot;niedrig&quot;&lt;/p&gt;&#10;" line="41" type="integer" variable="$hoeflichkeitParam">
+          <tag name="param" line="45" description="&lt;p&gt;Ein Wert fuer die angestrebte Hoeflichkeit des Begruessers.&#10;1 steht fuer &quot;sehr hoch&quot;, 2 steht fuer &quot;hoch&quot;,&#10;3 fuer &quot;normal&quot;, 4 fuer &quot;niedrig&quot;&lt;/p&gt;" type="integer" variable="$hoeflichkeitParam">
             <type>integer</type>
           </tag>
-          <tag name="param" description="&lt;p&gt;Das Geschlecht des Begruessers. &lt;br /&gt;Kann &quot;m&quot; oder &quot;f&quot; sein.&lt;/p&gt;&#10;" line="41" type="string" variable="$gender">
+          <tag name="param" line="45" description="&lt;p&gt;Das Geschlecht des Begruessers. &lt;br /&gt;Kann &quot;m&quot; oder &quot;f&quot; sein.&lt;/p&gt;" type="string" variable="$gender">
             <type>string</type>
           </tag>
-          <tag name="param" description="&lt;p&gt;(optional) Das Alter des Begruessers.&lt;/p&gt;&#10;" line="41" type="integer" variable="$alter">
+          <tag name="param" line="45" description="&lt;p&gt;(optional) Das Alter des Begruessers.&lt;/p&gt;" type="integer" variable="$alter">
             <type>integer</type>
           </tag>
-          <tag name="throws" description="$e Exception thrown, if the parameter count is below the required 2 params" line="41" type="\ErrorException">
+          <tag name="throws" line="45" description="$e Exception thrown, if the parameter count is below the required 2 params" type="\ErrorException">
             <type>\ErrorException</type>
           </tag>
-          <tag name="throws" description="$e Exception thrown, if the data type of any parameter does not match the required." line="41" type="\InvalidArgumentException">
+          <tag name="throws" line="45" description="$e Exception thrown, if the data type of any parameter does not match the required." type="\InvalidArgumentException">
             <type>\InvalidArgumentException</type>
           </tag>
         </docblock>
-        <argument line="0">
+        <argument line="0" by_reference="false">
           <name>$hoeflichkeitParam</name>
           <default></default>
           <type>integer</type>
         </argument>
-        <argument line="0">
+        <argument line="0" by_reference="false">
           <name>$gender</name>
           <default></default>
           <type>string</type>
         </argument>
-        <argument line="0">
+        <argument line="0" by_reference="false">
           <name>$alter</name>
           <default>25</default>
           <type>integer</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="80" package="\classes">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="84" package="classes">
         <name>getBegruessung</name>
         <full_name>\Begruesser::getBegruessung()</full_name>
-        <docblock line="80">
-          <description>getBegruessung. Returns a string containing the begruessung for your web page.</description>
+        <docblock line="84">
+          <description>getBegruessung: Returns a string containing the begruessung for your web page.</description>
           <long-description></long-description>
-          <tag name="param" description="&lt;p&gt;The user's second name&lt;/p&gt;&#10;" line="80" type="string" variable="$nutzerName">
+          <tag name="param" line="84" description="&lt;p&gt;The user's second name&lt;/p&gt;" type="string" variable="$nutzerName">
             <type>string</type>
           </tag>
-          <tag name="param" description="&lt;p&gt;The user's firstname&lt;/p&gt;&#10;" line="80" type="string" variable="$nutzerVorname">
+          <tag name="param" line="84" description="&lt;p&gt;The user's firstname&lt;/p&gt;" type="string" variable="$nutzerVorname">
             <type>string</type>
           </tag>
-          <tag name="param" description="&lt;p&gt;The user's gender.&lt;/p&gt;&#10;" line="80" type="string" variable="$nutzerGeschlecht">
+          <tag name="param" line="84" description="&lt;p&gt;The user's gender.&lt;/p&gt;" type="string" variable="$nutzerGeschlecht">
             <type>string</type>
           </tag>
-          <tag name="return" description="$begruessung The salutation string." line="80" type="string">
+          <tag name="return" line="84" description="$begruessung The salutation string." type="string">
             <type>string</type>
           </tag>
         </docblock>
-        <argument line="0">
+        <argument line="0" by_reference="false">
           <name>$nutzerName</name>
           <default></default>
           <type>string</type>
         </argument>
-        <argument line="0">
+        <argument line="0" by_reference="false">
           <name>$nutzerVorname</name>
           <default></default>
           <type>string</type>
         </argument>
-        <argument line="0">
+        <argument line="0" by_reference="false">
           <name>$nutzerGeschlecht</name>
           <default></default>
           <type>string</type>
         </argument>
       </method>
     </class>
-    <source>eJyVVm1P40YQ/pz8isGiNEFuIjj6BQiUcil34o6egLZShRRt7LG9wl7n9oUUKv57Z9d2YjvOlUuixJmd12fe9vR8kSz64/39PuzDLwsWPLIYIUiZUqiINq7OLi0JfsVYGqQzuZU/aDP+2+9ZHT0r8MQkcKExRgm7SY5RyoPkEbm2x+N+byH5E9PYPDvptzQoLbmIYVewDOE9qbqxDyHWzaoRTCUsuQzJIFzME4Yi5rHVB095BleogiTFINHAjM4zpjkRIEaF+kWP2v5YU1v9iFGE5MV7pgq1TmvLnbbCQmZD5QoclupS5YV72oxOwRyRiyg1SpE5jnAhrVm54jMi3gjE6a2bvcwFxWECncvCjQWTLOvO0hd3NCVA/0KyFRnrGBlmgnDTEudk4UONf8NrZ+GAgMOkFPcUJhKSPEg8Hw4bJwXRibwrSSKXGUuJ86gicAwlj72669vSknblZQSncwnjs2smBHiZB7mV8SIPFIE76oSkyM0gX2ieC5YOv5GmQl4nMl8qKkiZy+k/ATpB2EVY/3Eswgce0SOCs4hWY5AboYHbbKf50h1K/Gq4xJDwcnyqYeWjeGIpDy9kbDIU+m32QqYZ6OcFQh5ROp9rDoQ5xSRyDdQj1CF1B6rqiowInNbZLKjKabBZOX6VE7/EcHL487DfowHR49HAKpkJk82YjNVgCKdwOAR71nO+DkDgsgXhwJ72et4d1WDC5igI/wyuCxceqaJdO1y76VRLC7wYWKLgNLm+rMI0OEcZ05cY2aKzr+nsj7vp7Wx6e/v7rQ8HPoV3+eni7m42s4+fPt5MZzPLOXRfJ/T9WoSyw5WNBCUPOmAYboa1LWdVgHbIrV3t6MmMhgBQwSL8zZIUXpZ2mhEeB2BESN3iirkrriHUHYdB1TU7E9sNQ9jba9Iion2//2HT/1Kfc/rByx7KrnvwogfvTa7u6oSrn87qOMCkA5eTNW9pc7Ievaujop8nteFosai8nJRRu5hLCbd5iE5b0YSceZVfmFKhdTF+ZjLIK7ZXGI9hSnmhXutqnX7PvqsBHaOuD3S4RW2kUMCqQUdymnFhH21zztfMEFELPOeGFiHOqaVjHHUNSmH0C0q3RO9JgaEW+VFRHkhxCDaC7UJ/5lK05CIulf62VG0c1wQLvEsPpYtyJVcPyooolhrNHHAFy8YoasI2qAXpt5z3N90qst2wSkl0+bOVUS+bUziqaqPJPvDIwdV7vlwupZQjb1ivFZq+TW1nE2rWUp9achq4g45adwPH8fQCRhV3cAxFu7Q9Tlia5jS4adCzlMZ4bFCfuzDoNZfIHk/WWg6PC7qNcCNPk3IeFFY3LV3JPWOy9ARfuA8fUNIOhVG9tEqjr8VPEfwWO9Fb7fwmmfl/O1tUKboTCR0NvCujaVLes9iHHxR9duh+UYqQUHepWEvDpqk2nO+OVzlR+h55uiqh78B4LXln70lPKOnHFkoBcReo8DZUt2guMW0qbiA3qkHn8KKPD59pahf3cE63UUupIKSLaiTR0P2Bqhfsdc8Ht7A5hWEVFwmlxSzsYg6LvzKqLeKaw2tKMzEt8k2Dtp7FQ9hS/EfH3R00FZpQNGnIY6L4oHJI9nLroetGeLT3RvsQ0+1dcAt2scBKO/b7FWoDv+hqmlp0Hbe70jKUw65ue7UqunZFc7b1X/vnZ/8BPaI0bg==</source>
+    <source>eJyVVntv2kgQ/xs+xdTK5SDykUvaO52SkF7ackmVvpTkrlIVCS322F5hdrl9hDanfPebXdtgg2lSQGBmd16/eZ68nGfz7v7eXhf24CbjGhKeI0RSGMaFBpPRn5xpDa8wVRa1RhUCFwZFjDEkUgF+RRVxjdqJ4MKzcEEnM2Z4pAt21MAMTO/lIMrcvT+ZNRkxXzCh52hQwTXHNFEc4xAuv3wM4Y/fD3+Fz2ju+VSKEK4X3NyjypmIPf+cRVOWYiWdaPuVG6/X7H1UX82sNrHr/nf/63acqo5juGPKw5GSyJ1MYpLzKJsiN/CGaXjvOBNLZzFHuKgfx0SsZFqRDpy4/W5nrvgdM9iUddxd06iN4iKFHcFmCG9I0gf3EGPdTD2AkYIFV7GLytkkYyhSnnrld3IG56ijLMcoM0DgSBctIkCKmkA3G/Y4VVvtSF06KO+yF+ulrpmzLrDg2RC5BJPlphR55p82vdMwQaRUy63WxiN8ph4H1sutq30tBflhIyNVYcacKTZrj+onfzQiQD8j6VqGlgnCzSicmI0wN632Gg4IOMxK9kBjpiCTURaEcNg4KYie5XlJEq6ucrr5oiJQCiueBnXTt4Ulb4vLAE4mCvZPL5kQEMwCkI4nSALQBO6gFZIiNj05N1wKlve/E6aC32RKLjQlpJJq9DVCzwg7CKs//gpVOk98C/EafaVG0goD3EU7lwt/qPBfyxU1oMPinm5oeSvuWM7jM5XaGQrzNH0xMwzMtzmCTCic32oGxJJ8EtIA1QhVSN2AKrsSKyIvdTyOqnTqbWZOWMUkLDEcHv7W73aooXR40nNCxsLOxkyluteHEzjsgzvreFt7IHCxBmHPnXY6AXUzyNgEBeE/g8vChClltC+HS9/NamGBewsLFJw63aelmxYnqFL6EgOXdO41Gv99Pboaj66uPl6FcBCSe6/fnV1fj8fu8d3bD6Px2N3s+69j+n4oXHnGtfMEFY9aYOhvurUtZpWDrsmtTG2pyRk1AaCERfjCshzuF66bER4HYEVM1eKTuc2vPtQNh15VNc+Grhr6sLvbpCVE+3H746b9pTxv9G0wuy2r7jZIboMnmbpjaFj/ctqYOMMWXI5Xd0udw1XrXR4V9TysNUeHRWXlsPTa+1xy+MlDdBq2NuYsqOzCnBKt7eJ7piJZXXuA/X0YUVyo1tpKp9tx76pBp2hqDf0IrtBYRcsJqxpdua64R1eck9Vlv6F8k5YGIU6opFMctDVKYd1y4YfoDQmwVCI/a4oDCY7BebCd6R+pxBpfwpU23+eqteMaY4F3aaHyXi756k45Fs1ya5gHrriy0YqasPU2fQ3bXVknr2wtUqBhCkXWB9WlSz2XTuBFlTDN672ArF6+J4vFQik1CPr1BKKW3JR2OqQKLuVp2gSjrNdSAL4L+TudiFEavjiCoobWLc5Ynkvq5tT9WU69PbVoXno36DVRyKbHKynPjwq683AjeMOySRRaNzWdq11rZ/kx3vMQLlDRYIVBPQal0ofip3B+i57kqXr+Usw+rmeLKE2LkjBJLzi3tOTDDUtD+EnT5xktHSULMa1lTE1Tv6lqHc7Do2VMtLlBni9T6AcwXnFeu+XpDhX9uEQpIG4DFZ6G6hbJJaZNwQ3kBjXoPF70CeE9tfJiOee0ojpKBSFtr4lCS0sFZS+4HTAEP8U5ueEEFwGlaS3ctI6LvyqpTeeawStKMzBr5A8N2qpB92FL8h8ctVfQSBhC0eYxT4lCHUNCtiudhb4aYeqWSfeQ0kovuAO7mGqlHvf9ALUpUFQ1dR7a0d0AdRfKDljXvZwfbQOk2fC6D92Xp/8DBQSWhw==</source>
   </file>
-  <package name="" full_name="">
-    <package name="classes" full_name="\classes"/>
-  </package>
   <package name="classes" full_name="classes"/>
+  <package name="global" full_name="global"/>
   <namespace name="global" full_name="global"/>
   <deprecated count="0"/>
 </project>
