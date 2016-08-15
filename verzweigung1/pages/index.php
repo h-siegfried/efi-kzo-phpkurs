@@ -1,10 +1,25 @@
 <?php
-$begruessung = "";
+$alter = -1;        // Das Alter, das die Benutzerin eingegeben hat
+$begruessung = "";  // Die Begrüssung, die wir ihr präsentieren
 
-// Programmieren Sie hier eine Fallunterscheidung (Verzweigung):
-// Wird ein Alter unterhalb von 18 Jahren eingegeben, 
+
+// Den folgenden Code verstehen Sie vielleicht schon der Spur nach,
+// wenn Sie wissen, dass die Eingabe des Benutzers
+// unter $_POST['alter'] vorliegt:
+
+if(!empty($_POST['alter'])) {
+	$alter = $_POST['alter'];
+}
+
+// Programmieren Sie hier eine Fallunterscheidung:
+// Ist der Wert von $alter gleich -1, so hat die Benutzerin noch gar nichts eingegeben.
+// Liegt der Wert unterhalb von 18 Jahren,
 // weisen Sie $begruessung einen String fuer Minderjaehrige zu,
 // sonst einen fuer Volljaehrige:
+
+
+
+
 
 
 ?>
@@ -19,12 +34,7 @@ $begruessung = "";
 </head>
 <body>
 <h1>Erste &Uuml;bung mit einer Verzweigung</h1>
-<p>Die Begr&uuml;ssung:<p>
-<p>
-<?php 
-print($begruessung);
-?>
-</p>
+
 
 
 <h2>Geben Sie hier Ihr Alter ein!</h2>
@@ -38,5 +48,14 @@ print($begruessung);
 	<input type="submit" value="Los!" />
 </p>
 </form>
+
+
+<h2>Die Begr&uuml;ssung:<h2>
+<p>
+	<?php
+	print($begruessung);
+	?>
+</p>
+
 </body>
 </html>

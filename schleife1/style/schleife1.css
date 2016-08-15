@@ -1,0 +1,100 @@
+/* Angaben für Hintergrund und Ausmasse des
+*  Seiten-Body
+*/
+
+body {
+    background-color: #eeeeee;
+    width:95%;
+    margin-left: 1em;
+}
+
+/* Grundsätzliches zu Schriftart und -farbe
+ * aller hautpsächlichen Elemente unserer
+ * HTML-Seiten -- auch zu Hervorhebungen Element em
+ */
+
+p, h1, h2, h3, li, td, th {
+    font-family: Helvetica, Verdana, Arial, sans-serif;
+    color: #333333;
+}
+
+em {
+    font-weight: bold;
+    font-style: normal;
+}
+
+/*
+ * Überschriften -- zuerst das Gemeinsame,
+ * dann die Eigenschaften jeder Ebene
+ */
+
+h1, h2, h3 {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: x-large;
+}
+
+h2 {
+    font-size: large;
+    margin-top: 2.5em;
+    margin-bottom: 1.5em;
+}
+
+h3 {
+    font-size: medium;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+/*
+ * Angaben zu Textabsätzen
+ * und Elementen von Aufzählungen
+ */
+
+p {
+    font-size: medium;
+    line-height: 120%;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+li {
+    margin-top: 1em;
+    line-height: 120%;
+}
+
+/* Angaben zur Formatierung von Tabellen
+ * und dem Text darin
+ */
+
+table,tr,th,td {
+    border:1px solid black;
+    border-collapse: collapse;
+}
+
+table {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+td, th {
+    text-align:left;
+    padding: 0.25em;
+    vertical-align: top;
+}
+
+/* Links mit ihren sog. Pseudo-Klassen */
+
+a {
+    text-decoration: none;
+    font-weight:bold;
+    color:#003399;
+}
+
+a:hover {
+    background-color: #660000;
+    font-weight: bold;
+    color:#ffffff;
+}
