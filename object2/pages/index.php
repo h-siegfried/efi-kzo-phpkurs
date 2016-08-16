@@ -26,7 +26,7 @@ $begruessung;
 <head>
 <meta charset="UTF-8">
 <title>Erste &Uuml;bung mit Objekten</title>
-<link rel="stylesheet" href="../stylesheets/styles_object1.css" />
+<link rel="stylesheet" href="../style/styles_object2.css" />
 </head>
 <body>
 <h1>Erste &Uuml;bung mit einem Objekt</h1>

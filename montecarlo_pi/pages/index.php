@@ -1,40 +1,34 @@
 <?php
-ob_start();
-require_once('../../Turtle_class/Turtle.php');
-require_once('../../FirePHPCore/FirePHP.class.php');
-
-// Ein Objekt der Klasse FirePHP erzeugen
-$firephp = FirePHP::getInstance(true);
 
 // Im Arbeitsspeicher des Servers ein Bild erzeugen:
 $img = imagecreatetruecolor(400, 400);
 
-// Eine Farbe in der Farbpalette des Bildes definieren
+// Eine Farbe fuer den Hintergrund definieren
 $hintergrund = imagecolorallocate($img, 248,248,248);
 
-// Mit der eben definierten Farbe das gesamte Bild auffüllen
+// Danach eine Farbe für das Rechteck und den Kreissektor
+$rechteckfarbe = imagecolorallocate($img, 0, 204, 64);
+$kreisfarbe = imagecolorallocate($img, 204, 0, 0);
+
+// Mit der eben definierten Hintergrundfarbe das gesamte Bild auffüllen
 imagefill($img, 0, 0, $hintergrund);
 
-// Diesmal brauchen wir nicht die Turtle, sondern 
+// Auch in diesem Projekt benutzen wir
 // die eingebauten Zeichenfunktionen von PHP.
 // Wichtige Information:
 // Der "Ursprung" eines Bildes, 
 // also die Koordinate x=0; y=0,
 // befindet sich in der linken oberen Ecke.
 
-// Definieren Sie mit imagecolorallocate() eine Farbe fuer ein Rechteck,
-// Weisen Sie diese einer Variable zu:
 
-
-
-// Definieren Sie in gleicher Weise eine Farbe fuer einen Kreisbogen
-// und weisen Sie sie einer Variable zu:
 
 
 
 // Zeichnen Sie nun ein Rechteck, dessen linke obere Ecke
 // die Koordinaten 0,0 hat und dessen rechte untere Ecke die 
 // Koordinaten 200, 200. Verwenden Sie die vorher definierte Rechtecksfarbe.
+// Wie das geht: Suchen Sie auf http://php.net
+// die Dokumentation der Funktion imagerectangle
 
 
 
@@ -46,6 +40,8 @@ imagefill($img, 0, 0, $hintergrund);
 // Breite und Hoehe des Durchmessers: 400 mal 400 Pixel
 // Anfang beim Winkel 0, Ende beim Winkel 90 Grad
 // Farbe: Die vorher definierte Bogenfarbe.
+// Diese Zeichnungsfunktion heisst imagearc();
+// auch sie ist auf http://php.net dokumentiert.
 
 
 
@@ -64,7 +60,7 @@ imagefill($img, 0, 0, $hintergrund);
 
 // Erzeugen Sie in einer Schleife die Punkte.
 // Die Funktion dafür: imagesetpixel() (auf php.net nachschlagen!)
-// Sie sollen x- und y-Koordinaten zw. 0 und 200 haben.
+// Sie sollen zufällig gesetzte x- und y-Koordinaten zw. 0 und 200 haben.
 //
 // Wenn ein Punkt innerhalb des Bogens liegt, bekommt er die Bogenfarbe,
 // wenn ausserhalb, die Rechteckfarbe.
@@ -100,11 +96,11 @@ imagepng($img, "../images/bild.png");
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Erste &Uuml;bung mit Objekten</title>
+<title>Pi nach dem Montecarlo-Algorithmus</title>
 <link rel="stylesheet" href="../stylesheets/styles_schleife1.css" />
 </head>
 <body>
-<h1>Erste &Uuml;bung mit Schleifen</h1>
+<h1>Schleifen-Aufgabe: Pi nach dem Montecarlo-Algorithmus berechnen</h1>
 <img src="../images/bild.png" />
 <p>Quotient: <?php print($ausgabe);?></p>
 </body>

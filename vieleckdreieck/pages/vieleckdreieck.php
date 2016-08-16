@@ -1,15 +1,12 @@
 <?php
-ob_start();
 require_once('../../Turtle_class/Turtle.php');
 
-// Ein Objekt der Klasse FirePHP erzeugen
 
 
 $imgWidth= 600;
 $imgHeight = 600;
 // Im Arbeitsspeicher des Servers ein Bild erzeugen:
 $img = imagecreatetruecolor($imgWidth, $imgHeight);
-$firephp->log($img);
 
 // Eine Farbe in der Farbpalette des Bildes definieren
 $hintergrund = imagecolorallocate($img, 248,248,248);
@@ -23,17 +20,17 @@ imagefill($img, 0, 0, $hintergrund);
 // damit die Turtle nicht nur "geht", sondern auch
 // sichtbare Spuren hinterlässt.
 
-$zeichner = new Turtle($img,600,500);
-$zeichner->penDown();
+
 
 // wurde anzahlEcken, anzahlZeilen und seitenLaenge schon angegeben?
 // Machen Sie die gesamte Programm-Ausfuehrung davon abhaengig.
 // Informieren Sie sich auf http://php.net ueber die Function empty()
 // und ihr Verhalten gegenueber ungesetzten Array-Elementen.
 
+
 // Das Element 'abstand' von $_POST koennen Sie anders behandeln:
 // Wenn es ein leerer String ist, wird es einfach als 0 interpretiert.
-// Der Wert 0 wird von empty() ausgeschlossen, soll aber doch moeglich sein.
+// Der Wert 0 wird von !empty() ausgeschlossen, soll aber doch moeglich sein.
 
 if(true) { // Sie muessen natuerlich "true" durch Ihre Bedingung ersetzen ;-)
 	
@@ -47,6 +44,7 @@ if(true) { // Sie muessen natuerlich "true" durch Ihre Bedingung ersetzen ;-)
 	// eine Schleife, die die einzelnen Vielecke erzeugt.
 	// Alle benoetigten Groessen erhalten Sie aus dem Array $_POST
 	// (bzw. aus den Variablen, die Sie oben deklariert haben).
+    // Vorbilder sehen Sie im Ordner images.
 	
 	
 	
@@ -65,7 +63,7 @@ if(true) { // Sie muessen natuerlich "true" durch Ihre Bedingung ersetzen ;-)
 // aus dem Arbeitsspeicher auf die Festplatte.
 // Von dort wird es danach im HTML-Code eingebunden.
 // Sie sehen im Body den <img>-Tag, der dazu dient.
-imagepng($img, "../images/bild.png");
+imagepng($img, "../images/vieleckdreieck.png");
 
 
 

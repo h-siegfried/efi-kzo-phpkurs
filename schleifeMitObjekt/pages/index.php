@@ -1,5 +1,4 @@
 <?php
-ob_start();
 require_once('../../Turtle_class/Turtle.php');
 
 
