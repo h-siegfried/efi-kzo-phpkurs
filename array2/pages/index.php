@@ -17,7 +17,7 @@ $begruessung = "";
 </head>
 
 <body>
-<h1>Beispiel f&uuml; ein HTML-Formular</h1>
+<h1>Beispiel f&uuml;r ein HTML-Formular</h1>
 
 <h2>Die Ausgabe des PHP-Programms</h2>
 <p>
