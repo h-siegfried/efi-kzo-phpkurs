@@ -1,4 +1,4 @@
-<?php 
+<?php
 $antwort = "";
 $min = 1;
 $max = 16;
@@ -15,16 +15,13 @@ $meineZahl;
 // Minimum und Maximum für die Zufallszahl sind bereits
 // den Variablen $min und $max zugewisen.
 
-
-
-
 // "SONST":
-  // Ein Spiel ist am Laufen -- also muessen wir die Geheimzahl reaktivieren!
-	// Die Geheimzahl wird dem Server bei jedem Rateversuch
-	// Automatisch mitgeteilt, und zwar über die
-	// Variable $_POST['geheimzahl'] .
-	$meineZahl = $_POST['geheimzahl'];
+// Ein Spiel ist am Laufen -- also muessen wir die Geheimzahl reaktivieren!
+// Die Geheimzahl wird dem Server bei jedem Rateversuch
+// Automatisch mitgeteilt, und zwar über die
+// Variable $_POST['geheimzahl'] .
 
+$meineZahl = $_POST['geheimzahl'];
 
 
 // Pruefen Sie in der Folge, ob der Benutzer ueberhaupt schon
@@ -43,11 +40,6 @@ $meineZahl;
 // zu niedrig oder genau richtig war!
 
 
-
-
-
-
-
 // Ende des Falles, dass ein Rateversuch abgeschickt worden ist.
 // SONST...
 // Fahren Sie mit else weiter: Programmieren Sie hier die Reaktion darauf
@@ -55,7 +47,7 @@ $meineZahl;
 // Weisen Sie der Variable $antwort einen entsprechenden String zu.
 
 
-}
+
 
 ?>
 
@@ -64,60 +56,60 @@ $meineZahl;
 <html>
 
 <head>
-<meta charset="UTF-8">
-<title>Zahlenratespiel</title>
-<link rel="stylesheet" href="../stylesheets/style_zahlenraten.css" />
+    <meta charset="UTF-8">
+    <title>Zahlenratespiel</title>
+    <link rel="stylesheet" href="../stylesheets/style_zahlenraten.css"/>
 </head>
 
 <body>
 
-	<h1>Ein Zahlenratespiel</h1>
+<h1>Ein Zahlenratespiel</h1>
 
-	<div id="feedback">
-		<h2>Die Antwort</h2>
-		<p>
-			Ihr Rateversuch liegt
-			<?php 
-			// Programmieren Sie hier mit der Funktion print(),
-			// dass die Antwort ausgegeben wird.
-			// Die beiden Strings der Variablen
-			// $antwort_teil1 und $antwort_teil2
-			// sollen aneinandergehaengt werden.
-			
+<div id="feedback">
+    <h2>Die Antwort</h2>
+    <p>
+        Ihr Rateversuch liegt
+        <?php
+        // Programmieren Sie hier mit der Funktion print(),
+        // dass die Antwort ausgegeben wird.
+        // Die beiden Strings der Variablen
+        // $antwort_teil1 und $antwort_teil2
+        // sollen aneinandergehaengt werden.
 
-			?>
-		</p>
-	</div>
 
-	<div id="formular">
-		<h2>Raten Sie, welche Zahl ich mir ausgedacht habe!</h2>
-		<p>
-			Sie liegt zwischen
-			<?php print($min);?>
-			und
-			<?php print($max);?>.
-		</p>
-		<form action="#" method="post">
-			<p>
-				Ihr Rateversuch: 
-				<input type="number" name="rateversuch" /> 
-				<input
-					type="hidden" name="geheimzahl" value="<?php print($meineZahl);?>" />
-			
-			</p>
-			<p>
-				Pr&uuml;fen? <input type="submit" value="Pr&uuml;fen!" />
+        ?>
+    </p>
+</div>
 
-			</p>
-		</form>
-		<form action="#" method="post">
-			<p>
-				Neue Spiel beginnen? <input type="submit" name="neuesSpiel" value="Ja, neues Spiel!" />
-			</p>
+<div id="formular">
+    <h2>Raten Sie, welche Zahl ich mir ausgedacht habe!</h2>
+    <p>
+        Sie liegt zwischen
+        <?php print($min); ?>
+            und
+        <?php print($max); ?>.
+    </p>
+    <form action="#" method="post">
+        <p>
+            Ihr Rateversuch:
+            <input type="number" name="rateversuch"/>
+            <input
+                type="hidden" name="geheimzahl" value="<?php print($meineZahl); ?>"/>
 
-		</form>
+        </p>
+        <p>
+            Pr&uuml;fen? <input type="submit" value="Pr&uuml;fen!"/>
 
-	</div>
+        </p>
+    </form>
+    <form action="#" method="post">
+        <p>
+            Neue Spiel beginnen? <input type="submit" name="neuesSpiel" value="Ja, neues Spiel!"/>
+        </p>
+
+    </form>
+
+</div>
 
 </body>
 

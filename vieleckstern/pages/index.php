@@ -1,5 +1,4 @@
 <?php
-ob_start();
 require_once('../../Turtle_class/Turtle.php');
 
 // Im Arbeitsspeicher des Servers ein Bild erzeugen:
