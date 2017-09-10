@@ -1,11 +1,7 @@
 <?php
 ob_start();
 require_once('../../Turtle_class/Turtle.php');
-require_once('../../FirePHPCore/FirePHP.class.php');
 
-// Ein Objekt der Klasse FirePHP erzeugen
-$firephp = FirePHP::getInstance(true);
-$firephp->setEnabled(true);
 
 // Im Arbeitsspeicher des Servers ein Bild erzeugen:
 $img = imagecreatetruecolor(960, 400);

@@ -1,7 +1,12 @@
 <?php
 
+/*
+ * Deklarieren Sie unterhalb dieses Kommentars
+ * die Variablen $name und $vorstellung
+ * und weisen Sie ihnen die Werte zu,
+ * wie im Skript beschrieben.
+ */
 
-$vorstellung = "";
 
 ?>
 

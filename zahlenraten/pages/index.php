@@ -20,8 +20,10 @@ $meineZahl;
 // Die Geheimzahl wird dem Server bei jedem Rateversuch
 // Automatisch mitgeteilt, und zwar über die
 // Variable $_POST['geheimzahl'] .
+// Das geht so: $meineZahl = $_POST['geheimzahl'];
 
-$meineZahl = $_POST['geheimzahl'];
+
+
 
 
 // Pruefen Sie in der Folge, ob der Benutzer ueberhaupt schon

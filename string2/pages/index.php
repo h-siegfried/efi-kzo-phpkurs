@@ -1,5 +1,5 @@
 <?php
-$vollname = "Barack Obama";
+$vollerName = "Barack Obama";
 
 // Hier werden die Variablen $start und $nachname
 // erst einmal deklariert.
