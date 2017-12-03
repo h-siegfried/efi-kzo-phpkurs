@@ -123,8 +123,9 @@ class Begruesser
 					$begruessung = "Entschuldigung, so h&ouml;flich kann ich gar nicht sein.";
 					
 			}  // End of switch statement
-			return $begruessung;
+
 		}
+        return $begruessung;
 	}  // End of function getBegruessung
 }
 ?>
