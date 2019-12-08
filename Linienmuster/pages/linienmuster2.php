@@ -14,7 +14,7 @@ $hoehe  = 400;
 
 
 // Im Arbeitsspeicher des Servers ein Bild erzeugen:
-$img = imagecreatetruecolor(400, 400);
+$img = imagecreatetruecolor($breite, $hoehe);
 
 // Für den Hintergrund eine Farbe in der Farbpalette des Bildes definieren
 // Die erste Zahl gibt an, wie stark der Rot-Kanal leuchtet,
