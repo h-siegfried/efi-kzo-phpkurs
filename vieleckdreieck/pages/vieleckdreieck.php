@@ -63,7 +63,7 @@ if(true) { // Sie muessen natuerlich "true" durch Ihre Bedingung ersetzen ;-)
 // aus dem Arbeitsspeicher auf die Festplatte.
 // Von dort wird es danach im HTML-Code eingebunden.
 // Sie sehen im Body den <img>-Tag, der dazu dient.
-imagepng($img, "../images/vieleckdreieck.png");
+imagepng($img, "../images/bild.png");
 
 
 
@@ -96,7 +96,7 @@ imagepng($img, "../images/vieleckdreieck.png");
 		</p>
 		<p>
 			<label for="abstand">Abstand </label> <input
-				type="number" name="abstand" />
+				type="number" name="abstand" value="0" />
 		</p>
 		<p>
 			<label for="zeichnen">Figur zeichnen!</label> <input type="submit"
