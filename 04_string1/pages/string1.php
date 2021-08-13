@@ -25,11 +25,10 @@
 
 <p>Im n&auml;chsten Absatz erscheint die Ausgabe meines PHP-Programms:</p>
 
+<!-- Geben Sie bitte im folgenden p-Element den Inhalt der Variable $vorstellung aus. -->
 <p>
-<?php 
-// Auf der naechsten Zeile wird der Inhalt von $vorstellung ausgegeben:
-print($vorstellung);
-?>
+
+
 </p>
 
 </body>
