@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: sif
- * Date: 13.08.16
- * Time: 21:10
- */
 
 ?>
 
@@ -18,15 +12,17 @@
 </head>
 
 <body>
-<h1>Variablen und  Operationen</h1>
+<h1>Erste Experimente mit Variablen und Operationen</h1>
 
-<p>Hier geben wir das Ergebnis unserer Operation aus: </p>
+<p>Das Resultat der oben ausgeführten Operation:</p>
 
 <p>
     <?php
+    // Geben Sie hier den Wert der Variable $resultat
+    // auf der Webseite aus.
 
     ?>
 </p>
-</body>
 
+</body>
 </html>
