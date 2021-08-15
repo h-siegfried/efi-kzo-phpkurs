@@ -1,12 +1,40 @@
 <?php
-$vollerName = "Aleksandar Popov";
+/*
+ * Zuerst werden die eingegebenen Benutzerdaten übernommen.
+ * Diesen Teil des Codes müssen Sie noch nicht verstehen
+ *
+ * Lesen Sie ab dem Kommentar auf Zeile 21 weiter!
+ */
+$vollerName = "";
+$position = false;
+if(!empty($_POST['vollerName'])) {
+    $position = stripos($_POST['vollerName'], " ");
+}
+if($position !== false) {
+    $vollerName = $_POST['vollerName'];
+} else {
+    $vollerName = "(Keine Eingabe)";
+}
 
-// Hier werden die Variablen $start und $nachname
-// erst einmal deklariert.
-// Sie werden ihnen danach die Rückgaben der Funktionen
-// stripos() bzw. substr() zuweisen.
-$start;
-$nachname;
+
+/*
+ * Von hier an haben Sie
+ * unter der Variable $vollerName
+ * auf jeden Fall einen String zur Verfügung,
+ * mit dem Sie arbeiten können.
+ *
+ * 1. Deklarieren Sie die Variable $start
+ * 2. Weisen Sie ihr die Rückgabe der Funktion stripos() zu.
+ * 3. Deklarieren Sie die Variable $nachname.
+ * 4. Extrahieren Sie aus dem String der Variable $vollerName
+ *    mit der Funktion substr() den Nachnamen und
+ * 5. Weisen Sie diesen der Variable $nachname zu.
+ *
+ * 6. Geben Sie im HTML-Body,
+ *    im PHP-Codeblock ab Zeile 67
+ *    den gefundenen Nachnamen aus!
+ */
+
 
 ?>
 
@@ -14,23 +42,57 @@ $nachname;
 <html>
 
 <head>
-<meta charset="utf-8">
-<title>String-&Uuml;bungen</title>
-<link rel="stylesheet" href="../style/styles_string2.css" />
+    <meta charset="utf-8">
+    <title>String-&Uuml;bungen</title>
+    <link rel="stylesheet" href="../style/styles_string2.css"/>
 </head>
 
 
 <body>
 <h1>&Uuml;bung: String extrahieren</h1>
 
-<p>Im n&auml;chsten Absatz erscheint die Ausgabe meines PHP-Programms:<br />
-Der Nachname.</p>
+<h2>Die Ausgabe Ihres PHP-Programms</h2>
+<p>
+    Der eingegebene Name war:
+    <?php
+    print($vollerName);
+    ?>
+</p>
+
+
+<p>Im n&auml;chsten Absatz erscheint die Ausgabe meines PHP-Programms:<br/>
+    Der Nachname.</p>
 
 <p>
-<?php 
+    <?php
 
-?>
+    ?>
 </p>
+
+
+<!--
+Auf den folgenden Zeilen finden Sie
+den HTML-Code des Eingabeformulars.
+Auch auf diesen kommen wir später im
+Kurs zurück.
+-->
+
+<h2>Eingabeformular</h2>
+<form action="#" method="post">
+    <fieldset>
+        <legend>Eingabe</legend>
+        <p>
+            <label for="vollerName">Gib hier den vollen Namen,
+                bestehend aus Vor- und Nachname, ein.</label>
+        </p>
+        <p>
+            <input type="text" name="vollerName" placeholder="Vorname Nachname">
+        </p>
+        <p>
+            <input type="submit" value="Abschicken!">
+        </p>
+    </fieldset>
+</form>
 
 </body>
 
