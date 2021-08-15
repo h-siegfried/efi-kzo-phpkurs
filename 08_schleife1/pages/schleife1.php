@@ -1,10 +1,10 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: sif
- * Date: 15.08.16
- * Time: 14:44
- */
+ * Deklarieren Sie hier die Variable $liste
+ * und weisen Sie ihr nach und nach
+ * den HTML-Text Ihrer Liste zu.
+*/
+
 
 ?>
 

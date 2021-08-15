@@ -53,7 +53,8 @@ if(!empty($_POST['alter'])) {
 <h2>Die Begr&uuml;ssung:<h2>
 <p>
 	<?php
-	print($begruessung);
+	// Geben Sie den Wert der Variable $begruessung
+    // hier aus!
 	?>
 </p>
 
