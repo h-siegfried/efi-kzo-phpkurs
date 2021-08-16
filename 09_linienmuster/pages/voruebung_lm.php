@@ -14,7 +14,7 @@ $hoehe  = 400;
 
 
 // Im Arbeitsspeicher des Servers ein Bild erzeugen:
-$img = imagecreatetruecolor(400, 400);
+$img = imagecreatetruecolor($breite, $hoehe);
 
 // Für den Hintergrund eine Farbe in der Farbpalette des Bildes definieren
 // Die erste Zahl gibt an, wie stark der Rot-Kanal leuchtet,
@@ -42,6 +42,8 @@ $linienfarbe = imagecolorallocate($img, 192, 0, 0);
 // https://secure.php.net/manual/de/function.imageline.php
 // Als Farb-Parameter koennen Sie der Funktion imageline() die oben
 // in Zeile 35 definierte Linienfarbe uebergeben.
+// Verwenden Sie fuer die Koordinaten der Punkte
+// die oben initialisierten Variablen $breite und $hoehe!
 
 
 
