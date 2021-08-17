@@ -13,7 +13,7 @@ $begruessung = "";
 <head>
 <meta charset="utf-8">
 <title>HTML-Formular-Beispiel</title>
-<link rel="stylesheet" href="../style/styles_array1.css" />
+<link rel="stylesheet" href="../style/styles_array2.css" />
 </head>
 
 <body>
@@ -29,19 +29,19 @@ print($begruessung);
 <h2>Das Formular zur Dateneingabe</h2>
 <form action="#" method = "post">
 	<p>
-		Name: <input type="text" name="nachname" />
+		Name: <br><input type="text" name="nachname">
 	</p>
 
 	<p>
-		Vorname: <input type="text" name="vorname" />
+		Vorname: <br><input type="text" name="vorname">
 	</p>
 
 	<p>
-		Geburtsjahr: <input type="text" name="gebJahr" />
+		Geburtsjahr: <br><input type="text" name="gebJahr">
 	</p>
 
 	<p>
-		<input type="submit" name="go" value="abschicken!" />
+		<input type="submit" name="go" value="abschicken!">
 	</p>
 </form>
 </body>

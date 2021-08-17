@@ -50,6 +50,14 @@ $hauptstadt = "";
     ?>
 </p>
 
+
+<h2>Hier erscheint das ganze Wörter-Array</h2>
+<p>
+    <?php
+    print_r($woerter);
+    ?>
+</p>
+
 <h2>...und hier das ganze Hauptstädte-Array:</h2>
 <p>
     <?php
