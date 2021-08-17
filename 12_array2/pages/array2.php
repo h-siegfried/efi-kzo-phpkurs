@@ -2,7 +2,7 @@
 /* Programmieren Sie hier das Auslesen der Benutzer-Eingaben
 *  aus dem Array $_POST und das Zusammensetzen einer anstaendigen Begruessung:
 */
-
+$nachname = $_POST['nachname'];
 
 $begruessung = "";
 ?>
