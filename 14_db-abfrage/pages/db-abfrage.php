@@ -49,6 +49,7 @@ foreach($diesePerson[0] as $schluessel => $wert) {
 <html>
 <head>
     <meta charset="utf8">
+    <link rel="stylesheet" href="../styles/styles.css">
     <title>Detail zu einer Person</title>
 </head>
 
