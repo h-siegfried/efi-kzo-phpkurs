@@ -7,13 +7,10 @@
  */
 $vollerName = "";
 $position = false;
-if(!empty($_POST['vollerName'])) {
-    $position = stripos($_POST['vollerName'], " ");
-}
-if($position !== false) {
-    $vollerName = $_POST['vollerName'];
-} else {
+if(empty($_POST['vollerName'])) {
     $vollerName = "(Keine Eingabe)";
+} else {
+    $vollerName = $_POST['vollerName'];
 }
 
 
@@ -24,14 +21,14 @@ if($position !== false) {
  * mit dem Sie arbeiten können.
  *
  * 1. Deklarieren Sie die Variable $start
- * 2. Weisen Sie ihr die Rückgabe der Funktion stripos() zu.
+ * 2. Weisen Sie ihr den Rückgabewert der Funktion stripos() zu.
  * 3. Deklarieren Sie die Variable $nachname.
  * 4. Extrahieren Sie aus dem String der Variable $vollerName
  *    mit der Funktion substr() den Nachnamen und
  * 5. Weisen Sie diesen der Variable $nachname zu.
  *
  * 6. Geben Sie im HTML-Body,
- *    im PHP-Codeblock ab Zeile 67
+ *    im PHP-Codeblock ab Zeile 65
  *    den gefundenen Nachnamen aus!
  */
 
