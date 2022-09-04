@@ -1,7 +1,11 @@
 <?php
 
+// Variblen fuer Breite und Hoehe des Bildes ($seitenlaengeBild)
+// und der Figur ($radius) deklarieren:
+$seitenlaengeBild = 402;
+$radius = 400;
 // Im Arbeitsspeicher des Servers ein Bild erzeugen:
-$img = imagecreatetruecolor(400, 400);
+$img = imagecreatetruecolor($seitenlaengeBild, $seitenlaengeBild);
 
 // Eine Farbe fuer den Hintergrund definieren
 $hintergrund = imagecolorallocate($img, 248,248,248);
@@ -17,7 +21,7 @@ imagefill($img, 0, 0, $hintergrund);
 // die eingebauten Zeichenfunktionen von PHP.
 // Wichtige Information:
 // Der "Ursprung" eines Bildes, 
-// also die Koordinate x=0; y=0,
+// also die Koordinate x=0; y=0,
 // befindet sich in der linken oberen Ecke.
 
 
